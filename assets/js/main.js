@@ -435,7 +435,11 @@ window.theme = {
 window.interactions = {
     toggleSkill,
     toggleTimeline,
-    expandTimeline
+    expandTimeline,
+    scrollToProjects,
+    showProjectDetails,
+    closeProjectDetails,
+    scrollProjects
 };
 
 // Function to toggle skill expansion
@@ -521,6 +525,30 @@ function expandTimeline() {
     }
 }
 
+// Function to scroll to projects section
+function scrollToProjects() {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+        // Add ripple effect
+        const button = event.target.closest('button');
+        if (button) {
+            button.classList.add('ripple');
+            setTimeout(() => {
+                button.classList.remove('ripple');
+            }, 600);
+        }
+        
+        // Smooth scroll to projects section
+        projectsSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+        
+        // Update active navigation link
+        updateActiveNavLink('projects');
+    }
+}
+
 // Responsive Hamburger Menu
 const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 const navMobile = document.getElementById('navMobile');
@@ -593,4 +621,284 @@ bindLanguageDropdown('languageDropdownMobile', 'languageDropdownToggleMobile', '
 window.addEventListener('resize', () => {
     document.getElementById('languageDropdown')?.classList.remove('active');
     document.getElementById('languageDropdownMobile')?.classList.remove('active');
+});
+
+// Project data
+const projectData = {
+    project1: {
+        title: "E-commerce Platform",
+        description: "Nền tảng thương mại điện tử hiện đại với đầy đủ tính năng mua bán, quản lý đơn hàng, thanh toán trực tuyến và hệ thống quản trị.",
+        longDescription: "Dự án E-commerce Platform là một hệ thống thương mại điện tử hoàn chỉnh được phát triển với công nghệ hiện đại. Ứng dụng bao gồm các tính năng chính như quản lý sản phẩm, giỏ hàng, thanh toán, quản lý đơn hàng và hệ thống quản trị admin.",
+        technologies: ["React", "Node.js", "MongoDB", "Express.js", "Stripe API", "JWT"],
+        features: [
+            "Giao diện người dùng responsive và thân thiện",
+            "Hệ thống đăng ký/đăng nhập bảo mật",
+            "Quản lý sản phẩm với hình ảnh và mô tả chi tiết",
+            "Giỏ hàng và thanh toán trực tuyến",
+            "Quản lý đơn hàng và theo dõi trạng thái",
+            "Hệ thống đánh giá và bình luận",
+            "Dashboard quản trị với thống kê chi tiết"
+        ],
+        challenges: [
+            "Tối ưu hóa hiệu suất với lượng dữ liệu lớn",
+            "Bảo mật thông tin thanh toán",
+            "Xử lý đồng thời nhiều đơn hàng",
+            "Tích hợp nhiều cổng thanh toán"
+        ],
+        solutions: [
+            "Sử dụng Redis để cache dữ liệu",
+            "Mã hóa SSL/TLS cho thanh toán",
+            "Queue system để xử lý đơn hàng",
+            "API gateway để tích hợp thanh toán"
+        ],
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        demoUrl: "#",
+        githubUrl: "#"
+    },
+    project2: {
+        title: "Task Management App",
+        description: "Ứng dụng quản lý công việc với giao diện đẹp mắt, hỗ trợ teamwork và theo dõi tiến độ dự án.",
+        longDescription: "Task Management App là một ứng dụng web giúp quản lý công việc và dự án một cách hiệu quả. Ứng dụng hỗ trợ làm việc nhóm, theo dõi tiến độ và quản lý deadline.",
+        technologies: ["Vue.js", "Firebase", "Tailwind CSS", "Vuex", "Vue Router"],
+        features: [
+            "Tạo và quản lý task với deadline",
+            "Phân công công việc cho team members",
+            "Theo dõi tiến độ với Kanban board",
+            "Thông báo real-time",
+            "Báo cáo và thống kê",
+            "Tích hợp calendar"
+        ],
+        challenges: [
+            "Đồng bộ dữ liệu real-time",
+            "Quản lý quyền truy cập",
+            "Tối ưu UX cho mobile"
+        ],
+        solutions: [
+            "Firebase Realtime Database",
+            "Role-based access control",
+            "Progressive Web App (PWA)"
+        ],
+        image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        demoUrl: "#",
+        githubUrl: "#"
+    },
+    project3: {
+        title: "Portfolio Website",
+        description: "Website portfolio cá nhân với thiết kế hiện đại, responsive và hiệu ứng đẹp mắt.",
+        longDescription: "Portfolio Website được thiết kế với giao diện hiện đại, responsive và các hiệu ứng animation mượt mà. Website showcase các dự án, kỹ năng và kinh nghiệm làm việc.",
+        technologies: ["HTML/CSS", "JavaScript", "Tailwind CSS", "Lottie", "GSAP"],
+        features: [
+            "Giao diện responsive đẹp mắt",
+            "Hiệu ứng animation mượt mà",
+            "Dark/Light theme",
+            "Đa ngôn ngữ (VN/EN/JP)",
+            "Timeline kinh nghiệm",
+            "Contact form"
+        ],
+        challenges: [
+            "Tối ưu performance",
+            "Cross-browser compatibility",
+            "SEO optimization"
+        ],
+        solutions: [
+            "Lazy loading và code splitting",
+            "CSS fallbacks và polyfills",
+            "Meta tags và structured data"
+        ],
+        image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        demoUrl: "#",
+        githubUrl: "#"
+    },
+    project4: {
+        title: "Weather App",
+        description: "Ứng dụng thời tiết với API real-time, dự báo chính xác và giao diện thân thiện.",
+        longDescription: "Weather App cung cấp thông tin thời tiết real-time với dự báo chính xác. Ứng dụng có giao diện đẹp mắt và dễ sử dụng.",
+        technologies: ["React Native", "Expo", "OpenWeather API", "AsyncStorage"],
+        features: [
+            "Thời tiết real-time",
+            "Dự báo 7 ngày",
+            "Định vị tự động",
+            "Thông báo thời tiết",
+            "Widget cho home screen"
+        ],
+        challenges: [
+            "Tối ưu API calls",
+            "Xử lý location permissions",
+            "Offline functionality"
+        ],
+        solutions: [
+            "Caching với AsyncStorage",
+            "Request location permission",
+            "Service worker cho offline"
+        ],
+        image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        demoUrl: "#",
+        githubUrl: "#"
+    },
+    project5: {
+        title: "Chat Application",
+        description: "Ứng dụng chat real-time với WebSocket, hỗ trợ nhóm chat và file sharing.",
+        longDescription: "Chat Application là một ứng dụng chat real-time với khả năng tạo nhóm, chia sẻ file và gọi video. Ứng dụng sử dụng WebSocket để đảm bảo tốc độ truyền tin nhanh.",
+        technologies: ["Socket.io", "Express.js", "MongoDB", "React", "WebRTC"],
+        features: [
+            "Chat real-time",
+            "Tạo nhóm chat",
+            "Chia sẻ file và hình ảnh",
+            "Gọi video",
+            "Emoji và reactions",
+            "Tìm kiếm tin nhắn"
+        ],
+        challenges: [
+            "Xử lý WebSocket connections",
+            "File upload và storage",
+            "Video call quality"
+        ],
+        solutions: [
+            "Connection pooling",
+            "Cloud storage (AWS S3)",
+            "WebRTC optimization"
+        ],
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        demoUrl: "#",
+        githubUrl: "#"
+    }
+};
+
+// Function to show project details
+function showProjectDetails(projectId) {
+    const project = projectData[projectId];
+    if (!project) return;
+    
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    const modalFooter = document.getElementById('modalFooter');
+    
+    modalTitle.textContent = project.title;
+    
+    modalContent.innerHTML = `
+        <div class="project-details-image" style="background-image: url('${project.image}')"></div>
+        
+        <div class="space-y-6">
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-3 font-orbitron">Mô tả</h4>
+                <p class="text-blue-100 font-exo leading-relaxed">${project.longDescription}</p>
+            </div>
+            
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-3 font-orbitron">Công nghệ sử dụng</h4>
+                <div class="flex flex-wrap gap-2">
+                    ${project.technologies.map(tech => 
+                        `<span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">${tech}</span>`
+                    ).join('')}
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-3 font-orbitron">Tính năng chính</h4>
+                <ul class="text-blue-100 space-y-2 font-exo">
+                    ${project.features.map(feature => `<li>• ${feature}</li>`).join('')}
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-xl font-semibold text-white mb-3 font-orbitron">Thách thức & Giải pháp</h4>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h5 class="text-lg font-semibold text-red-300 mb-2 font-rajdhani">Thách thức</h5>
+                        <ul class="text-blue-100 space-y-1 font-exo text-sm">
+                            ${project.challenges.map(challenge => `<li>• ${challenge}</li>`).join('')}
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-green-300 mb-2 font-rajdhani">Giải pháp</h5>
+                        <ul class="text-blue-100 space-y-1 font-exo text-sm">
+                            ${project.solutions.map(solution => `<li>• ${solution}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Add action buttons to footer
+    modalFooter.innerHTML = `
+        <a href="${project.demoUrl}" class="neumorphism hover:neumorphism-inset font-rajdhani font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow text-white">
+            Xem Demo
+        </a>
+        <a href="${project.githubUrl}" class="neumorphism hover:neumorphism-inset font-rajdhani font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow-green text-white">
+            GitHub
+        </a>
+    `;
+    
+    // Show modal
+    modal.classList.remove('hidden');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Add blur class to body instead of using filter
+    document.body.classList.add('modal-open');
+}
+
+// Function to close project details
+function closeProjectDetails() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.add('hidden');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+    
+    // Remove blur class from body
+    document.body.classList.remove('modal-open');
+}
+
+// Function to scroll projects
+function scrollProjects(index) {
+    const scrollContainer = document.getElementById('projectsScroll');
+    const projectCards = scrollContainer.querySelectorAll('.project-card');
+    const indicators = document.querySelectorAll('.scroll-indicator');
+    
+    if (projectCards[index]) {
+        projectCards[index].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'start'
+        });
+        
+        // Update active indicator
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+    }
+}
+
+// Initialize scroll indicators
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollContainer = document.getElementById('projectsScroll');
+    const indicators = document.querySelectorAll('.scroll-indicator');
+    
+    if (scrollContainer && indicators.length > 0) {
+        // Set first indicator as active
+        indicators[0].classList.add('active');
+        
+        // Update indicators on scroll
+        scrollContainer.addEventListener('scroll', function() {
+            const scrollLeft = scrollContainer.scrollLeft;
+            const cardWidth = scrollContainer.querySelector('.project-card').offsetWidth + 24; // 24px gap
+            const currentIndex = Math.round(scrollLeft / cardWidth);
+            
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === currentIndex);
+            });
+        });
+    }
+    
+    // Close modal when clicking outside
+    const modal = document.getElementById('projectModal');
+    if (modal) {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeProjectDetails();
+            }
+        });
+    }
 });

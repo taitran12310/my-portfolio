@@ -140,7 +140,7 @@
                 <p class="text-xl text-blue-100 mb-10 font-exo leading-relaxed" data-i18n="hero.subtitle">Tôi là một nhà phát triển web đam mê sáng tạo</p>
                 
                 <!-- Animated Button with Neumorphism -->
-                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow" data-i18n="hero.cta">
+                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow ripple" data-i18n="hero.cta" onclick="scrollToProjects()">
                     <span class="flex items-center space-x-2">
                         <span>Xem dự án của tôi</span>
                         <div class="w-6 h-6">
@@ -573,80 +573,148 @@
         <!-- Projects Section -->
         <section id="projects" class="py-16">
             <h3 class="text-4xl font-bold text-white mb-12 text-center font-orbitron glow-text" data-i18n="projects.title">Dự án của tôi</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow">
-                    <div class="gradient-bg h-48 flex items-center justify-center relative">
-                        <div class="w-16 h-16 opacity-60 float">
-                            <lottie-player 
-                                src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style="width: 100%; height: 100%;" 
-                                loop 
-                                autoplay>
-                            </lottie-player>
+            
+            <!-- Projects Grid with Horizontal Scroll -->
+            <div class="projects-container relative">
+                <div class="projects-scroll flex gap-6 overflow-x-auto pb-6 scrollbar-hide" id="projectsScroll">
+                    <!-- Project 1 -->
+                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project1')">
+                        <div class="gradient-bg h-48 flex items-center justify-center relative">
+                            <div class="w-16 h-16 opacity-60 float">
+                                <lottie-player 
+                                    src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    style="width: 100%; height: 100%;" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <span class="text-white font-rajdhani font-medium">E-commerce Platform</span>
                         </div>
-                        <span class="text-white font-rajdhani font-medium" data-i18n="projects.project1.image">Dự án 1</span>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">E-commerce Platform</h4>
+                            <p class="text-blue-100 mb-4 font-exo">Nền tảng thương mại điện tử hiện đại với đầy đủ tính năng</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">React</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600">Node.js</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">MongoDB</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-3 text-white font-orbitron" data-i18n="projects.project1.title">Dự án Web App</h4>
-                        <p class="text-blue-100 mb-4 font-exo" data-i18n="projects.project1.description">Mô tả ngắn về dự án này</p>
-                        <div class="flex space-x-2">
-                            <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600" data-i18n="projects.project1.tech1">React</span>
-                            <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600" data-i18n="projects.project1.tech2">Node.js</span>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-green min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project2')">
+                        <div class="gradient-bg-alt h-48 flex items-center justify-center relative">
+                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 1s;">
+                                <lottie-player 
+                                    src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    style="width: 100%; height: 100%;" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <span class="text-white font-rajdhani font-medium">Task Management App</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Task Management App</h4>
+                            <p class="text-blue-100 mb-4 font-exo">Ứng dụng quản lý công việc với giao diện đẹp mắt</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">Vue.js</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-yellow-600">Firebase</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-purple min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project3')">
+                        <div class="gradient-bg h-48 flex items-center justify-center relative">
+                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 2s;">
+                                <lottie-player 
+                                    src="https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    style="width: 100%; height: 100%;" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <span class="text-white font-rajdhani font-medium">Portfolio Website</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Portfolio Website</h4>
+                            <p class="text-blue-100 mb-4 font-exo">Website portfolio cá nhân với thiết kế hiện đại</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-red-600">HTML/CSS</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-yellow-600">JavaScript</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project4')">
+                        <div class="gradient-bg-alt h-48 flex items-center justify-center relative">
+                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 3s;">
+                                <lottie-player 
+                                    src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    style="width: 100%; height: 100%;" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <span class="text-white font-rajdhani font-medium">Weather App</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Weather App</h4>
+                            <p class="text-blue-100 mb-4 font-exo">Ứng dụng thời tiết với API real-time</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">React Native</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600">Expo</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">OpenWeather API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-green min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project5')">
+                        <div class="gradient-bg h-48 flex items-center justify-center relative">
+                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 4s;">
+                                <lottie-player 
+                                    src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                    background="transparent" 
+                                    speed="1" 
+                                    style="width: 100%; height: 100%;" 
+                                    loop 
+                                    autoplay>
+                                </lottie-player>
+                            </div>
+                            <span class="text-white font-rajdhani font-medium">Chat Application</span>
+                        </div>
+                        <div class="p-6">
+                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Chat Application</h4>
+                            <p class="text-blue-100 mb-4 font-exo">Ứng dụng chat real-time với WebSocket</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">Socket.io</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600">Express.js</span>
+                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">MongoDB</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
-                <div class="glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-green">
-                    <div class="gradient-bg-alt h-48 flex items-center justify-center relative">
-                        <div class="w-16 h-16 opacity-60 float" style="animation-delay: 1s;">
-                            <lottie-player 
-                                src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style="width: 100%; height: 100%;" 
-                                loop 
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <span class="text-white font-rajdhani font-medium" data-i18n="projects.project2.image">Dự án 2</span>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-3 text-white font-orbitron" data-i18n="projects.project2.title">Dự án Mobile App</h4>
-                        <p class="text-blue-100 mb-4 font-exo" data-i18n="projects.project2.description">Mô tả ngắn về dự án này</p>
-                        <div class="flex space-x-2">
-                            <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600" data-i18n="projects.project2.tech1">React Native</span>
-                            <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-yellow-600" data-i18n="projects.project2.tech2">Firebase</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-purple">
-                    <div class="gradient-bg h-48 flex items-center justify-center relative">
-                        <div class="w-16 h-16 opacity-60 float" style="animation-delay: 2s;">
-                            <lottie-player 
-                                src="https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style="width: 100%; height: 100%;" 
-                                loop 
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        <span class="text-white font-rajdhani font-medium" data-i18n="projects.project3.image">Dự án 3</span>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-3 text-white font-orbitron" data-i18n="projects.project3.title">Dự án E-commerce</h4>
-                        <p class="text-blue-100 mb-4 font-exo" data-i18n="projects.project3.description">Mô tả ngắn về dự án này</p>
-                        <div class="flex space-x-2">
-                            <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-red-600" data-i18n="projects.project3.tech1">Vue.js</span>
-                            <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-indigo-600" data-i18n="projects.project3.tech2">Laravel</span>
-                        </div>
-                    </div>
+                <!-- Scroll Indicators -->
+                <div class="flex justify-center mt-6 space-x-2">
+                    <button class="scroll-indicator w-3 h-3 rounded-full bg-blue-400 opacity-50 transition-all duration-300" onclick="window.interactions.scrollProjects(0)"></button>
+                    <button class="scroll-indicator w-3 h-3 rounded-full bg-blue-400 opacity-50 transition-all duration-300" onclick="window.interactions.scrollProjects(1)"></button>
+                    <button class="scroll-indicator w-3 h-3 rounded-full bg-blue-400 opacity-50 transition-all duration-300" onclick="window.interactions.scrollProjects(2)"></button>
+                    <button class="scroll-indicator w-3 h-3 rounded-full bg-blue-400 opacity-50 transition-all duration-300" onclick="window.interactions.scrollProjects(3)"></button>
+                    <button class="scroll-indicator w-3 h-3 rounded-full bg-blue-400 opacity-50 transition-all duration-300" onclick="window.interactions.scrollProjects(4)"></button>
                 </div>
             </div>
         </section>
@@ -697,6 +765,33 @@
             </div>
         </section>
     </main>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-[9999] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="glass rounded-3xl max-w-4xl w-full max-h-[90vh] relative z-[10000] flex flex-col">
+            <!-- Fixed Header -->
+            <div class="flex justify-between items-start p-8 pb-4 border-b border-gray-700">
+                <h3 id="modalTitle" class="text-3xl font-bold text-white font-orbitron">Dự án</h3>
+                <button onclick="window.interactions.closeProjectDetails()" class="text-white hover:text-blue-300 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-8 pt-4">
+                <div id="modalContent" class="space-y-6">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+            
+            <!-- Fixed Footer with Action Buttons -->
+            <div class="flex justify-end gap-4 p-8 pt-4 border-t border-gray-700" id="modalFooter">
+                <!-- Action buttons will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="glass-dark py-12">

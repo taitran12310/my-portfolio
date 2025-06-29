@@ -1662,6 +1662,230 @@ html, body {
     color: #47EBEB;
 }
 [data-theme="light"] .language-dropdown-toggle .flag-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Projects Scroll Styles */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+/* Projects scroll container */
+.projects-scroll {
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 30px 20px; /* Add padding for shadow space */
+    margin: -30px -20px; /* Compensate for padding */
+    overflow-x: auto;
+    overflow-y: visible; /* Allow shadow to show */
+}
+
+.project-card {
+    scroll-snap-align: start;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    margin: 0 10px; /* Add margin between cards */
+}
+
+.project-card:hover {
+    z-index: 10;
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Enhanced neon glow for project cards */
+.project-card.neon-glow {
+    box-shadow: 0 0 20px var(--neon-glow-primary), 0 0 40px rgba(59, 130, 246, 0.3), 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.neon-glow-green {
+    box-shadow: 0 0 20px var(--neon-glow-secondary), 0 0 40px rgba(16, 185, 129, 0.3), 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.neon-glow-purple {
+    box-shadow: 0 0 20px var(--neon-glow-accent), 0 0 40px rgba(147, 51, 234, 0.3), 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .project-card.neon-glow {
+    box-shadow: 0 0 20px var(--neon-glow-primary), 0 0 40px rgba(71, 235, 235, 0.3), 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .project-card.neon-glow-green {
+    box-shadow: 0 0 20px var(--neon-glow-secondary), 0 0 40px rgba(36, 71, 71, 0.3), 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .project-card.neon-glow-purple {
+    box-shadow: 0 0 20px var(--neon-glow-accent), 0 0 40px rgba(148, 199, 199, 0.3), 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll indicators */
+.scroll-indicator.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Project modal */
+#projectModal {
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+#projectModal .glass {
+    animation: modalSlideIn 0.3s ease-out;
+    filter: none !important;
+    z-index: 10000;
+    position: relative;
+}
+
+#projectModal .glass * {
+    filter: none !important;
+}
+
+/* Ensure modal content is always on top and not blurred */
+#projectModal .glass,
+#projectModal .glass *,
+#projectModal .glass .p-8,
+#projectModal .glass .space-y-6 {
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Modal scrollbar styles */
+#projectModal .overflow-y-auto {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-primary) transparent;
+}
+
+#projectModal .overflow-y-auto::-webkit-scrollbar {
+    width: 6px;
+}
+
+#projectModal .overflow-y-auto::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#projectModal .overflow-y-auto::-webkit-scrollbar-thumb {
+    background: var(--accent-primary);
     border-radius: 3px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+#projectModal .overflow-y-auto::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-secondary);
+}
+
+/* Modal border styles */
+#projectModal .border-b,
+#projectModal .border-t {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] #projectModal .border-b,
+[data-theme="dark"] #projectModal .border-t {
+    border-color: rgba(71, 235, 235, 0.2) !important;
+}
+
+/* Blur effect when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open main,
+body.modal-open header {
+    filter: blur(5px);
+    pointer-events: none;
+    transition: filter 0.3s ease;
+}
+
+/* Ensure modal and its children are never blurred */
+body.modal-open #projectModal,
+body.modal-open #projectModal * {
+    filter: none !important;
+    pointer-events: auto !important;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Project details content */
+.project-details-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-details-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.3), rgba(16, 185, 129, 0.3));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .projects-scroll {
+        gap: 1rem;
+    }
+    
+    .project-card {
+        min-width: 280px;
+    }
+    
+    #projectModal .glass {
+        margin: 1rem;
+        max-height: calc(100vh - 2rem);
+    }
+}
+
+/* Project modal button styles */
+#projectModal .neumorphism {
+    color: var(--text-primary) !important;
+    text-shadow: 0 0 5px var(--accent-primary);
+}
+
+#projectModal .neumorphism:hover {
+    color: var(--text-primary) !important;
+    text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-primary);
+}
+
+/* Dark theme modal buttons */
+[data-theme="dark"] #projectModal .neumorphism {
+    color: #ffffff !important;
+    text-shadow: 0 0 5px var(--accent-primary);
+}
+
+[data-theme="dark"] #projectModal .neumorphism:hover {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-primary);
+}
+
+/* Light theme modal buttons */
+[data-theme="light"] #projectModal .neumorphism {
+    color: #1e293b !important;
+    text-shadow: 0 0 5px var(--accent-primary);
+}
+
+[data-theme="light"] #projectModal .neumorphism:hover {
+    color: #1e293b !important;
+    text-shadow: 0 0 10px var(--accent-primary), 0 0 20px var(--accent-primary);
 }
