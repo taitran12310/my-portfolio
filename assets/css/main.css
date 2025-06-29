@@ -1,14 +1,14 @@
 /* Custom Font Classes */
 .font-orbitron { 
-    font-family: 'Orbitron', sans-serif; 
+    font-family: 'Be Vietnam Pro', 'Roboto', Arial, sans-serif; 
 }
 
 .font-exo { 
-    font-family: 'Exo', sans-serif; 
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif; 
 }
 
 .font-rajdhani { 
-    font-family: 'Rajdhani', sans-serif; 
+    font-family: 'Be Vietnam Pro', 'Roboto', Arial, sans-serif; 
 }
 
 /* Theme Variables */
@@ -66,17 +66,22 @@
 /* Theme Toggle Button */
 .theme-toggle {
     position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0;
+    border-width: 1.5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
     overflow: hidden;
 }
 
@@ -152,19 +157,23 @@ header.sticky {
 
 .language-dropdown-toggle {
     position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0;
+    border-width: 1.5px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
     overflow: hidden;
-    padding: 0;
 }
 
 .language-dropdown-toggle:hover {
@@ -201,6 +210,10 @@ header.sticky {
 .language-dropdown-toggle .flag-icon {
     width: 32px;
     height: 24px;
+    border-radius: 3px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
 
 .flag-icon {
@@ -1570,15 +1583,17 @@ html, body {
 /* Light theme button styles - đồng bộ với dark theme */
 [data-theme="light"] .theme-toggle,
 [data-theme="light"] .language-dropdown-toggle {
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
-    min-height: 50px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0;
+    border-width: 1.5px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 0;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
@@ -1609,15 +1624,6 @@ html, body {
 [data-theme="light"] .theme-toggle:hover::before,
 [data-theme="light"] .language-dropdown-toggle:hover::before {
     transform: translateX(100%);
-}
-
-[data-theme="light"] .language-dropdown-toggle .flag-icon {
-    width: 32px;
-    height: 24px;
-    border-radius: 3px;
-    object-fit: cover;
-    transition: all 0.3s ease;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
 
 [data-theme="light"] .nav-link,

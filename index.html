@@ -8,7 +8,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo:wght@300;400;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -20,7 +20,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     
     <!-- Custom Tailwind Config -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
@@ -29,15 +29,39 @@
     <header class="glass sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
-                <div class="flex items-center">
+                <div class="flex items-center h-full">
                     <a href="/" class="text-xl font-bold text-white font-orbitron glow-text" data-i18n="header.title">My Portfolio</a>
                 </div>
-                <!-- Hamburger menu button (mobile) -->
-                <button id="mobileMenuBtn" class="md:hidden ml-2 p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
+                <!-- Nút language và theme cho mobile (ẩn trên desktop) -->
+                <div class="flex items-center h-full gap-2 md:hidden">
+                    <div class="language-dropdown" id="languageDropdownMobile">
+                        <button class="language-dropdown-toggle w-12 h-12 p-0 rounded-full border border-cyan-400 bg-white/30 backdrop-blur shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-200" id="languageDropdownToggleMobile" aria-label="Select language">
+                            <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon current-flag" id="currentFlagMobile">
+                        </button>
+                        <div class="language-dropdown-menu" id="languageDropdownMenuMobile">
+                            <button class="language-option" data-lang="vn" data-flag="https://flagcdn.com/w80/vn.png">
+                                <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon">
+                            </button>
+                            <button class="language-option" data-lang="en" data-flag="https://flagcdn.com/w80/gb.png">
+                                <img src="https://flagcdn.com/w80/gb.png" alt="English" class="flag-icon">
+                            </button>
+                            <button class="language-option" data-lang="jp" data-flag="https://flagcdn.com/w80/jp.png">
+                                <img src="https://flagcdn.com/w80/jp.png" alt="Japanese" class="flag-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle w-12 h-12 p-0 rounded-full border border-cyan-400 bg-white/30 backdrop-blur shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-200" id="themeToggleMobile" aria-label="Toggle theme">
+                        <svg class="icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="icon moon-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobileMenuBtn" class="md:hidden w-12 h-12 p-0 rounded-lg border border-cyan-400 bg-white/30 backdrop-blur shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-200">
+                        <img src="assets/img/menu.svg" alt="Menu" class="w-7 h-7 text-cyan-600">
+                    </button>
+                </div>
                 <div class="flex items-center space-x-6 nav-desktop md:flex hidden" id="navDesktop">
                     <a href="#home" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.home">Trang chủ</a>
                     <a href="#about" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.about">Giới thiệu</a>
@@ -46,7 +70,7 @@
                     <a href="#contact" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.contact">Liên hệ</a>
                     <!-- Language Dropdown -->
                     <div class="language-dropdown" id="languageDropdown">
-                        <button class="language-dropdown-toggle" id="languageDropdownToggle" aria-label="Select language">
+                        <button class="language-dropdown-toggle rounded-full" id="languageDropdownToggle" aria-label="Select language">
                             <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon current-flag" id="currentFlag">
                         </button>
                         <div class="language-dropdown-menu" id="languageDropdownMenu">
@@ -62,7 +86,7 @@
                         </div>
                     </div>
                     <!-- Theme Toggle Button -->
-                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <button class="theme-toggle rounded-full" id="themeToggle" aria-label="Toggle theme">
                         <svg class="icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
                         </svg>
@@ -71,18 +95,18 @@
                         </svg>
                     </button>
                 </div>
-                <!-- Mobile nav (ẩn mặc định, hiện khi bấm hamburger) -->
-                <div id="navMobile" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex flex-col items-center justify-center space-y-8 md:hidden hidden">
-                    <a href="#home" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.home">Trang chủ</a>
-                    <a href="#about" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.about">Giới thiệu</a>
-                    <a href="#timeline" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.timeline">Kinh nghiệm</a>
-                    <a href="#projects" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.projects">Dự án</a>
-                    <a href="#contact" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.contact">Liên hệ</a>
-                    <button id="closeMobileMenu" class="mt-8 text-white text-lg px-6 py-2 rounded bg-cyan-500 hover:bg-cyan-600">Đóng</button>
-                </div>
             </div>
         </nav>
     </header>
+    <!-- Mobile nav (ẩn mặc định, hiện khi bấm hamburger) đặt ngoài header để không bị giới hạn chiều cao -->
+    <div id="navMobile" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex flex-col items-center justify-center space-y-8 md:hidden hidden">
+        <a href="#home" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.home">Trang chủ</a>
+        <a href="#about" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.about">Giới thiệu</a>
+        <a href="#timeline" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.timeline">Kinh nghiệm</a>
+        <a href="#projects" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.projects">Dự án</a>
+        <a href="#contact" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.contact">Liên hệ</a>
+        <button id="closeMobileMenu" class="mt-8 text-white text-lg px-6 py-2 rounded bg-cyan-500 hover:bg-cyan-600">Đóng</button>
+    </div>
 
     <!-- Main Content -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

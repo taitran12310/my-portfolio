@@ -192,17 +192,12 @@ function setTheme(theme) {
 }
 
 function toggleTheme() {
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    
-    // Add animation effect
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.style.transform = 'scale(0.8) rotate(180deg)';
-        setTimeout(() => {
-            themeToggle.style.transform = 'scale(1) rotate(0deg)';
-        }, 300);
-    }
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    // Nếu muốn lưu vào localStorage:
+    localStorage.setItem('theme', next);
 }
 
 function initTheme() {
@@ -390,19 +385,14 @@ document.addEventListener('DOMContentLoaded', async function() {
         }, 100);
     }
     
-    // Theme toggle event listener
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-    }
+    // Theme toggle event listener cho cả desktop và mobile
+    ['themeToggle', 'themeToggleMobile'].forEach(id => {
+        const btn = document.getElementById(id);
+        if (btn) btn.addEventListener('click', toggleTheme);
+    });
     
     // Language dropdown event listeners
-    const languageDropdownToggle = document.getElementById('languageDropdownToggle');
     const languageOptions = document.querySelectorAll('.language-option');
-    
-    if (languageDropdownToggle) {
-        languageDropdownToggle.addEventListener('click', toggleLanguageDropdown);
-    }
     
     languageOptions.forEach(option => {
         option.addEventListener('click', function() {
@@ -414,7 +404,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
         const dropdown = document.getElementById('languageDropdown');
-        const toggle = document.getElementById('languageDropdownToggle');
         
         if (dropdown && !dropdown.contains(event.target)) {
             closeLanguageDropdown();
@@ -550,3 +539,53 @@ if (navMobile) {
         });
     });
 }
+
+// Đổi ngôn ngữ cho cả desktop và mobile
+function setLanguage(lang, flag) {
+    // Cập nhật cờ cho cả hai dropdown
+    const flagEls = [
+        document.getElementById('currentFlag'),
+        document.getElementById('currentFlagMobile')
+    ];
+    flagEls.forEach(el => { if (el) el.src = flag; });
+    // Lưu vào localStorage
+    localStorage.setItem('lang', lang);
+    // ... logic cập nhật giao diện đa ngôn ngữ ...
+    // (nếu có hàm loadLanguage thì gọi ở đây)
+    if (window.loadLanguage) window.loadLanguage(lang);
+}
+
+function bindLanguageDropdown(dropdownId, toggleId, menuId, flagId) {
+    const dropdown = document.getElementById(dropdownId);
+    const toggle = document.getElementById(toggleId);
+    const menu = document.getElementById(menuId);
+    if (!dropdown || !toggle || !menu) return;
+    // Toggle menu
+    toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+    });
+    // Chọn ngôn ngữ
+    menu.querySelectorAll('.language-option').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            const flag = btn.getAttribute('data-flag');
+            setLanguage(lang, flag);
+            dropdown.classList.remove('active');
+        });
+    });
+    // Đóng khi click ngoài, nhưng KHÔNG đóng nếu click vào toggle
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && e.target !== toggle) {
+            dropdown.classList.remove('active');
+        }
+    });
+}
+bindLanguageDropdown('languageDropdown', 'languageDropdownToggle', 'languageDropdownMenu', 'currentFlag');
+bindLanguageDropdown('languageDropdownMobile', 'languageDropdownToggleMobile', 'languageDropdownMenuMobile', 'currentFlagMobile');
+
+// Đóng dropdown language khi resize để tránh lỗi khi chuyển giữa mobile/desktop
+window.addEventListener('resize', () => {
+    document.getElementById('languageDropdown')?.classList.remove('active');
+    document.getElementById('languageDropdownMobile')?.classList.remove('active');
+});
