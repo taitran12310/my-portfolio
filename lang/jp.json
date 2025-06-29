@@ -1,0 +1,79 @@
+{
+    "page": {
+        "title": "My Portfolio"
+    },
+    "header": {
+        "title": "My Portfolio"
+    },
+    "nav": {
+        "home": "ホーム",
+        "about": "私について",
+        "timeline": "経験",
+        "projects": "プロジェクト",
+        "contact": "お問い合わせ"
+    },
+    "hero": {
+        "title": "私のポートフォリオへようこそ",
+        "subtitle": "私は情熱的なウェブ開発者です",
+        "cta": "プロジェクトを見る"
+    },
+    "about": {
+        "title": "私について",
+        "description": "私は現代的なウェブアプリケーションの構築に経験を持つウェブ開発者です。素晴らしいユーザー体験を作り出すことに情熱を持ち、常に新しい技術を学んでいます。",
+        "avatar": "プロフィール画像"
+    },
+    "timeline": {
+        "title": "職歴",
+        "item1": {
+            "period": "2023 - 現在",
+            "title": "シニアフロントエンド開発者",
+            "company": "テックカンパニーABC",
+            "description": "React、Vue.jsを使用したWebアプリケーション開発"
+        },
+        "item2": {
+            "period": "2021 - 2023",
+            "title": "フルスタック開発者",
+            "company": "スタートアップXYZ",
+            "description": "フルスタックWebアプリケーションの構築"
+        }
+    },
+    "projects": {
+        "title": "私のプロジェクト",
+        "project1": {
+            "image": "プロジェクト1",
+            "title": "ウェブアプリプロジェクト",
+            "description": "このプロジェクトの簡単な説明",
+            "tech1": "React",
+            "tech2": "Node.js"
+        },
+        "project2": {
+            "image": "プロジェクト2",
+            "title": "モバイルアプリプロジェクト",
+            "description": "このプロジェクトの簡単な説明",
+            "tech1": "React Native",
+            "tech2": "Firebase"
+        },
+        "project3": {
+            "image": "プロジェクト3",
+            "title": "Eコマースプロジェクト",
+            "description": "このプロジェクトの簡単な説明",
+            "tech1": "Vue.js",
+            "tech2": "Laravel"
+        }
+    },
+    "contact": {
+        "title": "お問い合わせ",
+        "form": {
+            "name": "氏名",
+            "email": "メールアドレス",
+            "message": "メッセージ",
+            "submit": "メッセージを送信",
+            "name_placeholder": "氏名を入力してください",
+            "email_placeholder": "メールアドレスを入力してください",
+            "message_placeholder": "メッセージを入力してください"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Tai Tran. 全著作権所有。"
+    }
+}

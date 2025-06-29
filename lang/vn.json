@@ -1,0 +1,79 @@
+{
+    "page": {
+        "title": "My Portfolio"
+    },
+    "header": {
+        "title": "My Portfolio"
+    },
+    "nav": {
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "timeline": "Kinh nghiệm",
+        "projects": "Dự án",
+        "contact": "Liên hệ"
+    },
+    "hero": {
+        "title": "Chào mừng đến với Portfolio của tôi",
+        "subtitle": "Tôi là một nhà phát triển web đam mê sáng tạo",
+        "cta": "Xem dự án của tôi"
+    },
+    "about": {
+        "title": "Về tôi",
+        "description": "Tôi là một nhà phát triển web với kinh nghiệm trong việc xây dựng các ứng dụng web hiện đại. Tôi đam mê tạo ra những trải nghiệm người dùng tuyệt vời và luôn tìm hiểu những công nghệ mới.",
+        "avatar": "Ảnh đại diện"
+    },
+    "timeline": {
+        "title": "Kinh nghiệm làm việc",
+        "item1": {
+            "period": "2023 - Hiện tại",
+            "title": "Senior Frontend Developer",
+            "company": "Tech Company ABC",
+            "description": "Phát triển ứng dụng web với React, Vue.js"
+        },
+        "item2": {
+            "period": "2021 - 2023",
+            "title": "Full Stack Developer",
+            "company": "Startup XYZ",
+            "description": "Xây dựng ứng dụng web full-stack"
+        }
+    },
+    "projects": {
+        "title": "Dự án của tôi",
+        "project1": {
+            "image": "Dự án 1",
+            "title": "Dự án Web App",
+            "description": "Mô tả ngắn về dự án này",
+            "tech1": "React",
+            "tech2": "Node.js"
+        },
+        "project2": {
+            "image": "Dự án 2",
+            "title": "Dự án Mobile App",
+            "description": "Mô tả ngắn về dự án này",
+            "tech1": "React Native",
+            "tech2": "Firebase"
+        },
+        "project3": {
+            "image": "Dự án 3",
+            "title": "Dự án E-commerce",
+            "description": "Mô tả ngắn về dự án này",
+            "tech1": "Vue.js",
+            "tech2": "Laravel"
+        }
+    },
+    "contact": {
+        "title": "Liên hệ",
+        "form": {
+            "name": "Họ tên",
+            "email": "Email",
+            "message": "Tin nhắn",
+            "submit": "Gửi tin nhắn",
+            "name_placeholder": "Nhập họ tên của bạn",
+            "email_placeholder": "Nhập email của bạn",
+            "message_placeholder": "Nhập tin nhắn của bạn"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Tai Tran. Tất cả quyền được bảo lưu."
+    }
+}

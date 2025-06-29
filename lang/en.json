@@ -1,0 +1,79 @@
+{
+    "page": {
+        "title": "My Portfolio"
+    },
+    "header": {
+        "title": "My Portfolio"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "timeline": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Welcome to My Portfolio",
+        "subtitle": "I am a passionate web developer",
+        "cta": "View My Projects"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "I am a web developer with experience in building modern web applications. I am passionate about creating great user experiences and always learning new technologies.",
+        "avatar": "Avatar"
+    },
+    "timeline": {
+        "title": "Work Experience",
+        "item1": {
+            "period": "2023 - Present",
+            "title": "Senior Frontend Developer",
+            "company": "Tech Company ABC",
+            "description": "Developing web applications with React, Vue.js"
+        },
+        "item2": {
+            "period": "2021 - 2023",
+            "title": "Full Stack Developer",
+            "company": "Startup XYZ",
+            "description": "Building full-stack web applications"
+        }
+    },
+    "projects": {
+        "title": "My Projects",
+        "project1": {
+            "image": "Project 1",
+            "title": "Web App Project",
+            "description": "Brief description of this project",
+            "tech1": "React",
+            "tech2": "Node.js"
+        },
+        "project2": {
+            "image": "Project 2",
+            "title": "Mobile App Project",
+            "description": "Brief description of this project",
+            "tech1": "React Native",
+            "tech2": "Firebase"
+        },
+        "project3": {
+            "image": "Project 3",
+            "title": "E-commerce Project",
+            "description": "Brief description of this project",
+            "tech1": "Vue.js",
+            "tech2": "Laravel"
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "form": {
+            "name": "Full Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message",
+            "name_placeholder": "Enter your full name",
+            "email_placeholder": "Enter your email",
+            "message_placeholder": "Enter your message"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Tai Tran. All rights reserved."
+    }
+}
