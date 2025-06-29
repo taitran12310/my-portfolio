@@ -328,15 +328,16 @@
             
             <div class="max-w-4xl mx-auto relative">
                 <!-- Timeline Line -->
-                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full gradient-bg rounded-full"></div>
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full gradient-bg rounded-full hidden md:block"></div>
                 
                 <!-- Timeline Items -->
                 <div class="space-y-12" id="timelineContainer">
                     <!-- Timeline Item 1 -->
-                    <div class="timeline-item relative flex items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <div class="w-1/2 pr-8 text-right">
+                    <div class="timeline-item relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
+                        <!-- Left content (desktop) -->
+                        <div class="w-full md:w-1/2 p-0 md:pr-8 text-center md:text-right md:block">
                             <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow">
-                                <div class="flex items-center justify-end mb-3">
+                                <div class="flex items-center justify-center md:justify-end mb-3">
                                     <span class="text-sm font-rajdhani font-medium text-blue-300" data-i18n="timeline.item1.period">2023 - Hiện tại</span>
                                     <svg class="expand-indicator w-5 h-5 text-blue-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -367,17 +368,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="w-1/2 pl-8"></div>
+                        <!-- Dot timeline -->
+                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
+                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
+                        </div>
+                        <!-- Right content (desktop) -->
+                        <div class="hidden md:block w-1/2 pl-8"></div>
                     </div>
                     
                     <!-- Timeline Item 2 -->
-                    <div class="timeline-item relative flex items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <div class="w-1/2 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg-alt rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="w-1/2 pl-8">
+                    <div class="timeline-item relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
+                        <div class="hidden md:block w-1/2 pr-8"></div>
+                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
+                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg-alt rounded-full border-4 border-white shadow-lg"></div>
+                        </div>
+                        <div class="w-full md:w-1/2 p-0 md:pl-8 text-center md:text-left">
                             <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow-green">
-                                <div class="flex items-center mb-3">
+                                <div class="flex items-center justify-center md:justify-start mb-3">
                                     <span class="text-sm font-rajdhani font-medium text-green-300" data-i18n="timeline.item2.period">2021 - 2023</span>
                                     <svg class="expand-indicator w-5 h-5 text-green-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -411,10 +418,12 @@
                     </div>
                     
                     <!-- Hidden Timeline Items -->
-                    <div class="timeline-item hidden relative flex items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <div class="w-1/2 pr-8 text-right">
+                    <!-- Item 3 (lẻ) -->
+                    <div class="timeline-item hidden relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
+                        <!-- Left content (desktop) -->
+                        <div class="w-full md:w-1/2 p-0 md:pr-8 text-center md:text-right md:block">
                             <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow-purple">
-                                <div class="flex items-center justify-end mb-3">
+                                <div class="flex items-center justify-center md:justify-end mb-3">
                                     <span class="text-sm font-rajdhani font-medium text-purple-300">2019 - 2021</span>
                                     <svg class="expand-indicator w-5 h-5 text-purple-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -445,16 +454,25 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="w-1/2 pl-8"></div>
+                        <!-- Dot timeline -->
+                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
+                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
+                        </div>
+                        <!-- Right content (desktop) -->
+                        <div class="hidden md:block w-1/2 pl-8"></div>
                     </div>
-                    
-                    <div class="timeline-item hidden relative flex items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <div class="w-1/2 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg-alt rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="w-1/2 pl-8">
+                    <!-- Item 4 (chẵn) -->
+                    <div class="timeline-item hidden relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
+                        <!-- Left content (desktop, rỗng) -->
+                        <div class="hidden md:block w-1/2 pr-8"></div>
+                        <!-- Dot timeline -->
+                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
+                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg-alt rounded-full border-4 border-white shadow-lg"></div>
+                        </div>
+                        <!-- Right content (desktop) -->
+                        <div class="w-full md:w-1/2 p-0 md:pl-8 text-center md:text-left">
                             <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow">
-                                <div class="flex items-center mb-3">
+                                <div class="flex items-center justify-center md:justify-start mb-3">
                                     <span class="text-sm font-rajdhani font-medium text-blue-300">2017 - 2019</span>
                                     <svg class="expand-indicator w-5 h-5 text-blue-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -486,11 +504,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item hidden relative flex items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <div class="w-1/2 pr-8 text-right">
+                    <!-- Item 5 (lẻ) -->
+                    <div class="timeline-item hidden relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
+                        <!-- Left content (desktop) -->
+                        <div class="w-full md:w-1/2 p-0 md:pr-8 text-center md:text-right md:block">
                             <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow-green">
-                                <div class="flex items-center justify-end mb-3">
+                                <div class="flex items-center justify-center md:justify-end mb-3">
                                     <span class="text-sm font-rajdhani font-medium text-green-300">2015 - 2017</span>
                                     <svg class="expand-indicator w-5 h-5 text-green-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -512,17 +531,20 @@
                                     <div class="mt-4 pt-4 border-t border-green-200/20">
                                         <h6 class="text-md font-semibold text-white mb-2 font-rajdhani">Công nghệ sử dụng:</h6>
                                         <div class="flex flex-wrap gap-2">
-                                            <span class="px-2 py-1 bg-indigo-600/20 text-indigo-300 rounded text-xs">C++</span>
                                             <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Java</span>
-                                            <span class="px-2 py-1 bg-orange-600/20 text-orange-300 rounded text-xs">Python</span>
-                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">SQL</span>
+                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">C++</span>
+                                            <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">Python</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
-                        <div class="w-1/2 pl-8"></div>
+                        <!-- Dot timeline -->
+                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
+                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
+                        </div>
+                        <!-- Right content (desktop) -->
+                        <div class="hidden md:block w-1/2 pl-8"></div>
                     </div>
                 </div>
                 

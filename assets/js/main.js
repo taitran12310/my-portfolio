@@ -489,23 +489,28 @@ function expandTimeline() {
     
     // Show next 2 items
     let shownCount = 0;
+    let lastShown = null;
     hiddenItems.forEach((item, index) => {
         if (shownCount < 2 && item.classList.contains('hidden')) {
             item.classList.remove('hidden');
             item.style.opacity = '0';
             item.style.transform = 'translateY(20px)';
-            
             // Animate in
             setTimeout(() => {
                 item.style.transition = 'all 0.6s ease-out';
                 item.style.opacity = '1';
                 item.style.transform = 'translateY(0)';
             }, index * 100);
-            
             shownCount++;
+            lastShown = item;
         }
     });
-    
+    // Nếu là mobile, scroll tới item mới nhất
+    if (window.innerWidth <= 768 && lastShown) {
+        setTimeout(() => {
+            lastShown.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 700);
+    }
     // Check if all items are shown
     const remainingHidden = container.querySelectorAll('.timeline-item.hidden').length;
     if (remainingHidden === 0) {
