@@ -1,0 +1,144 @@
+[
+  {
+    "title": "E-commerce Platform",
+    "description": "Modern e-commerce platform with full features",
+    "longDescription": "E-commerce Platform is a complete e-commerce system developed with modern technology. The application includes main features such as product management, cart, payment, order management, and admin dashboard.",
+    "features": [
+      "Responsive and user-friendly UI",
+      "Secure registration/login system",
+      "Product management with images and detailed descriptions",
+      "Cart and online payment",
+      "Order management and status tracking",
+      "Review and comment system",
+      "Admin dashboard with detailed statistics"
+    ],
+    "challenges": [
+      "Performance optimization with large data",
+      "Payment information security",
+      "Handling multiple orders concurrently",
+      "Integrating multiple payment gateways"
+    ],
+    "solutions": [
+      "Use Redis for data caching",
+      "SSL/TLS encryption for payment",
+      "Queue system for order processing",
+      "API gateway for payment integration"
+    ],
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["React", "Node.js", "MongoDB"],
+    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "Task Management App",
+    "description": "Task management application with beautiful UI",
+    "longDescription": "Task Management App is a web application that helps manage tasks and projects efficiently. The app supports teamwork, progress tracking, and deadline management.",
+    "features": [
+      "Create and manage tasks with deadlines",
+      "Assign tasks to team members",
+      "Track progress with Kanban board",
+      "Real-time notifications",
+      "Reports and statistics",
+      "Calendar integration"
+    ],
+    "challenges": [
+      "Real-time data synchronization",
+      "Access control management",
+      "UX optimization for mobile"
+    ],
+    "solutions": [
+      "Firebase Realtime Database",
+      "Role-based access control",
+      "Progressive Web App (PWA)"
+    ],
+    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["Vue.js", "Firebase", "Tailwind"],
+    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Personal portfolio website with modern design",
+    "longDescription": "Portfolio Website is designed with a modern, responsive interface and smooth animation effects. The website showcases projects, skills, and work experience.",
+    "features": [
+      "Beautiful responsive interface",
+      "Smooth animation effects",
+      "Dark/Light theme",
+      "Multi-language (VN/EN/JP)",
+      "Experience timeline",
+      "Contact form"
+    ],
+    "challenges": [
+      "Performance optimization",
+      "Cross-browser compatibility",
+      "SEO optimization"
+    ],
+    "solutions": [
+      "Lazy loading and code splitting",
+      "CSS fallbacks and polyfills",
+      "Meta tags and structured data"
+    ],
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
+    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "Weather App",
+    "description": "Weather application with real-time API",
+    "longDescription": "Weather App provides real-time weather information with accurate forecasts. The app has a beautiful and easy-to-use interface.",
+    "features": [
+      "Real-time weather",
+      "7-day forecast",
+      "Automatic location detection",
+      "Weather notifications",
+      "Home screen widget"
+    ],
+    "challenges": [
+      "API call optimization",
+      "Handling location permissions",
+      "Offline functionality"
+    ],
+    "solutions": [
+      "Caching with AsyncStorage",
+      "Request location permission",
+      "Service worker for offline"
+    ],
+    "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["React Native", "Expo", "OpenWeather API"],
+    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "Chat Application",
+    "description": "Real-time chat application with WebSocket",
+    "longDescription": "Chat Application is a real-time chat app with group creation, file sharing, and video calling. The app uses WebSocket for fast message delivery.",
+    "features": [
+      "Real-time chat",
+      "Create chat groups",
+      "File and image sharing",
+      "Video calling",
+      "Emoji and reactions",
+      "Message search"
+    ],
+    "challenges": [
+      "Handling WebSocket connections",
+      "File upload and storage",
+      "Video call quality"
+    ],
+    "solutions": [
+      "Connection pooling",
+      "Cloud storage (AWS S3)",
+      "WebRTC optimization"
+    ],
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["Socket.io", "Express.js", "MongoDB"],
+    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  }
+] 

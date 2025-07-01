@@ -18,9 +18,15 @@
     
     <!-- LottieFiles -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    
+
+
+    <!-- Common JS Functions -->
+    <script src="assets/js/common.js"></script>
     <!-- Custom Tailwind Config -->
     <script src="assets/js/main.js" defer></script>
+    <!-- Render JS -->
+    <script src="assets/js/renderProjects.js"></script>
+    <script src="assets/js/renderExperiences.js"></script>
 
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
@@ -282,10 +288,12 @@
                 <div class="glass rounded-3xl p-8 flex items-center justify-center relative overflow-hidden">
                     <div class="text-center">
                         <div class="w-48 h-48 mx-auto mb-6 rounded-full gradient-bg flex items-center justify-center neon-glow">
-                            <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center">
-                                <span class="text-gray-500 font-rajdhani font-medium" data-i18n="about.avatar">Ảnh đại diện</span>
+                            <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                                <img src="assets/img/avatar.png" alt="Avatar" class="w-full h-full object-cover rounded-full" />
                             </div>
                         </div>
+                        <!-- Thông tin cá nhân -->
+                        <div id="aboutInfoBox" class="flex flex-col justify-between h-full text-left font-rajdhani text-blue-200 text-lg font-semibold mb-4"></div>
                         
                         <!-- Floating Icons -->
                         <div class="absolute top-4 right-4 w-8 h-8 opacity-60 float">
@@ -332,220 +340,8 @@
                 
                 <!-- Timeline Items -->
                 <div class="space-y-12" id="timelineContainer">
-                    <!-- Timeline Item 1 -->
-                    <div class="timeline-item relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <!-- Left content (desktop) -->
-                        <div class="w-full md:w-1/2 p-0 md:pr-8 text-center md:text-right md:block">
-                            <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow">
-                                <div class="flex items-center justify-center md:justify-end mb-3">
-                                    <span class="text-sm font-rajdhani font-medium text-blue-300" data-i18n="timeline.item1.period">2023 - Hiện tại</span>
-                                    <svg class="expand-indicator w-5 h-5 text-blue-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-xl font-semibold text-white font-orbitron mb-2" data-i18n="timeline.item1.title">Senior Frontend Developer</h4>
-                                <p class="text-blue-100 font-exo mb-3" data-i18n="timeline.item1.company">Tech Company ABC</p>
-                                <p class="text-blue-100 text-sm font-exo" data-i18n="timeline.item1.description">Phát triển ứng dụng web với React, Vue.js</p>
-                            </div>
-                            <div class="timeline-details">
-                                <div class="timeline-details-content">
-                                    <h5 class="text-lg font-semibold text-white mb-3 font-orbitron">Trách nhiệm chính:</h5>
-                                    <ul class="text-blue-100 text-sm space-y-2 font-exo">
-                                        <li>• Lãnh đạo team 5 developers và đảm bảo chất lượng code</li>
-                                        <li>• Phát triển các ứng dụng web hiện đại sử dụng React, Vue.js</li>
-                                        <li>• Tối ưu hóa hiệu suất và trải nghiệm người dùng</li>
-                                        <li>• Mentoring junior developers và code review</li>
-                                    </ul>
-                                    <div class="mt-4 pt-4 border-t border-blue-200/20">
-                                        <h6 class="text-md font-semibold text-white mb-2 font-rajdhani">Công nghệ sử dụng:</h6>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">React</span>
-                                            <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Vue.js</span>
-                                            <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">TypeScript</span>
-                                            <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">Tailwind CSS</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dot timeline -->
-                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
-                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
-                        </div>
-                        <!-- Right content (desktop) -->
-                        <div class="hidden md:block w-1/2 pl-8"></div>
-                    </div>
+                    <!-- Timeline item is rendered by renderExperiences.js -->
                     
-                    <!-- Timeline Item 2 -->
-                    <div class="timeline-item relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <div class="hidden md:block w-1/2 pr-8"></div>
-                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
-                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg-alt rounded-full border-4 border-white shadow-lg"></div>
-                        </div>
-                        <div class="w-full md:w-1/2 p-0 md:pl-8 text-center md:text-left">
-                            <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow-green">
-                                <div class="flex items-center justify-center md:justify-start mb-3">
-                                    <span class="text-sm font-rajdhani font-medium text-green-300" data-i18n="timeline.item2.period">2021 - 2023</span>
-                                    <svg class="expand-indicator w-5 h-5 text-green-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-xl font-semibold text-white font-orbitron mb-2" data-i18n="timeline.item2.title">Full Stack Developer</h4>
-                                <p class="text-blue-100 font-exo mb-3" data-i18n="timeline.item2.company">Startup XYZ</p>
-                                <p class="text-blue-100 text-sm font-exo" data-i18n="timeline.item2.description">Xây dựng ứng dụng web full-stack</p>
-                            </div>
-                            <div class="timeline-details">
-                                <div class="timeline-details-content">
-                                    <h5 class="text-lg font-semibold text-white mb-3 font-orbitron">Trách nhiệm chính:</h5>
-                                    <ul class="text-blue-100 text-sm space-y-2 font-exo">
-                                        <li>• Xây dựng ứng dụng web từ đầu đến cuối</li>
-                                        <li>• Phát triển RESTful APIs và database design</li>
-                                        <li>• Làm việc trong môi trường startup năng động</li>
-                                        <li>• Học hỏi và áp dụng công nghệ mới</li>
-                                    </ul>
-                                    <div class="mt-4 pt-4 border-t border-green-200/20">
-                                        <h6 class="text-md font-semibold text-white mb-2 font-rajdhani">Công nghệ sử dụng:</h6>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Node.js</span>
-                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">MongoDB</span>
-                                            <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">Express</span>
-                                            <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">React</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Hidden Timeline Items -->
-                    <!-- Item 3 (lẻ) -->
-                    <div class="timeline-item hidden relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <!-- Left content (desktop) -->
-                        <div class="w-full md:w-1/2 p-0 md:pr-8 text-center md:text-right md:block">
-                            <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow-purple">
-                                <div class="flex items-center justify-center md:justify-end mb-3">
-                                    <span class="text-sm font-rajdhani font-medium text-purple-300">2019 - 2021</span>
-                                    <svg class="expand-indicator w-5 h-5 text-purple-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-xl font-semibold text-white font-orbitron mb-2">Junior Developer</h4>
-                                <p class="text-blue-100 font-exo mb-3">Digital Agency DEF</p>
-                                <p class="text-blue-100 text-sm font-exo">Bắt đầu sự nghiệp với việc phát triển website</p>
-                            </div>
-                            <div class="timeline-details">
-                                <div class="timeline-details-content">
-                                    <h5 class="text-lg font-semibold text-white mb-3 font-orbitron">Trách nhiệm chính:</h5>
-                                    <ul class="text-blue-100 text-sm space-y-2 font-exo">
-                                        <li>• Phát triển website cho khách hàng</li>
-                                        <li>• Học hỏi các kỹ năng cơ bản về HTML, CSS, JavaScript</li>
-                                        <li>• Làm việc trong team nhỏ và học hỏi từ senior developers</li>
-                                        <li>• Tham gia các dự án thực tế</li>
-                                    </ul>
-                                    <div class="mt-4 pt-4 border-t border-purple-200/20">
-                                        <h6 class="text-md font-semibold text-white mb-2 font-rajdhani">Công nghệ sử dụng:</h6>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="px-2 py-1 bg-red-600/20 text-red-300 rounded text-xs">HTML/CSS</span>
-                                            <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">JavaScript</span>
-                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">PHP</span>
-                                            <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">WordPress</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dot timeline -->
-                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
-                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
-                        </div>
-                        <!-- Right content (desktop) -->
-                        <div class="hidden md:block w-1/2 pl-8"></div>
-                    </div>
-                    <!-- Item 4 (chẵn) -->
-                    <div class="timeline-item hidden relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <!-- Left content (desktop, rỗng) -->
-                        <div class="hidden md:block w-1/2 pr-8"></div>
-                        <!-- Dot timeline -->
-                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
-                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg-alt rounded-full border-4 border-white shadow-lg"></div>
-                        </div>
-                        <!-- Right content (desktop) -->
-                        <div class="w-full md:w-1/2 p-0 md:pl-8 text-center md:text-left">
-                            <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow">
-                                <div class="flex items-center justify-center md:justify-start mb-3">
-                                    <span class="text-sm font-rajdhani font-medium text-blue-300">2017 - 2019</span>
-                                    <svg class="expand-indicator w-5 h-5 text-blue-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-xl font-semibold text-white font-orbitron mb-2">Freelance Developer</h4>
-                                <p class="text-blue-100 font-exo mb-3">Self-employed</p>
-                                <p class="text-blue-100 text-sm font-exo">Làm việc tự do và học hỏi các công nghệ mới</p>
-                            </div>
-                            <div class="timeline-details">
-                                <div class="timeline-details-content">
-                                    <h5 class="text-lg font-semibold text-white mb-3 font-orbitron">Trách nhiệm chính:</h5>
-                                    <ul class="text-blue-100 text-sm space-y-2 font-exo">
-                                        <li>• Nhận các dự án freelance nhỏ</li>
-                                        <li>• Tự học và nghiên cứu các công nghệ mới</li>
-                                        <li>• Xây dựng portfolio cá nhân</li>
-                                        <li>• Tham gia các cộng đồng developer</li>
-                                    </ul>
-                                    <div class="mt-4 pt-4 border-t border-blue-200/20">
-                                        <h6 class="text-md font-semibold text-white mb-2 font-rajdhani">Công nghệ sử dụng:</h6>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">HTML/CSS</span>
-                                            <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">JavaScript</span>
-                                            <span class="px-2 py-1 bg-purple-600/20 text-purple-300 rounded text-xs">jQuery</span>
-                                            <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Bootstrap</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 5 (lẻ) -->
-                    <div class="timeline-item hidden relative flex flex-col md:flex-row items-center md:items-center" onclick="window.interactions.toggleTimeline(this)">
-                        <!-- Left content (desktop) -->
-                        <div class="w-full md:w-1/2 p-0 md:pr-8 text-center md:text-right md:block">
-                            <div class="glass rounded-3xl p-6 transform hover:scale-105 transition-all duration-300 neon-glow-green">
-                                <div class="flex items-center justify-center md:justify-end mb-3">
-                                    <span class="text-sm font-rajdhani font-medium text-green-300">2015 - 2017</span>
-                                    <svg class="expand-indicator w-5 h-5 text-green-300 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                                <h4 class="text-xl font-semibold text-white font-orbitron mb-2">Student Developer</h4>
-                                <p class="text-blue-100 font-exo mb-3">University Projects</p>
-                                <p class="text-blue-100 text-sm font-exo">Học tập và thực hành trong môi trường đại học</p>
-                            </div>
-                            <div class="timeline-details">
-                                <div class="timeline-details-content">
-                                    <h5 class="text-lg font-semibold text-white mb-3 font-orbitron">Trách nhiệm chính:</h5>
-                                    <ul class="text-blue-100 text-sm space-y-2 font-exo">
-                                        <li>• Học tập các môn học về lập trình</li>
-                                        <li>• Tham gia các dự án thực tế trong trường</li>
-                                        <li>• Tham gia hackathon và coding competitions</li>
-                                        <li>• Xây dựng foundation về computer science</li>
-                                    </ul>
-                                    <div class="mt-4 pt-4 border-t border-green-200/20">
-                                        <h6 class="text-md font-semibold text-white mb-2 font-rajdhani">Công nghệ sử dụng:</h6>
-                                        <div class="flex flex-wrap gap-2">
-                                            <span class="px-2 py-1 bg-green-600/20 text-green-300 rounded text-xs">Java</span>
-                                            <span class="px-2 py-1 bg-blue-600/20 text-blue-300 rounded text-xs">C++</span>
-                                            <span class="px-2 py-1 bg-yellow-600/20 text-yellow-300 rounded text-xs">Python</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dot timeline -->
-                        <div class="w-full flex justify-center md:block md:w-auto order-first md:order-none mb-4 md:mb-0">
-                            <div class="w-8 h-8 md:w-6 md:h-6 gradient-bg rounded-full border-4 border-white shadow-lg"></div>
-                        </div>
-                        <!-- Right content (desktop) -->
-                        <div class="hidden md:block w-1/2 pl-8"></div>
-                    </div>
                 </div>
                 
                 <!-- Expand Button -->
@@ -577,135 +373,7 @@
             <!-- Projects Grid with Horizontal Scroll -->
             <div class="projects-container relative">
                 <div class="projects-scroll flex gap-6 overflow-x-auto pb-6 scrollbar-hide" id="projectsScroll">
-                    <!-- Project 1 -->
-                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project1')">
-                        <div class="gradient-bg h-48 flex items-center justify-center relative">
-                            <div class="w-16 h-16 opacity-60 float">
-                                <lottie-player 
-                                    src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                    background="transparent" 
-                                    speed="1" 
-                                    style="width: 100%; height: 100%;" 
-                                    loop 
-                                    autoplay>
-                                </lottie-player>
-                            </div>
-                            <span class="text-white font-rajdhani font-medium">E-commerce Platform</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">E-commerce Platform</h4>
-                            <p class="text-blue-100 mb-4 font-exo">Nền tảng thương mại điện tử hiện đại với đầy đủ tính năng</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">React</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600">Node.js</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-green min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project2')">
-                        <div class="gradient-bg-alt h-48 flex items-center justify-center relative">
-                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 1s;">
-                                <lottie-player 
-                                    src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                    background="transparent" 
-                                    speed="1" 
-                                    style="width: 100%; height: 100%;" 
-                                    loop 
-                                    autoplay>
-                                </lottie-player>
-                            </div>
-                            <span class="text-white font-rajdhani font-medium">Task Management App</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Task Management App</h4>
-                            <p class="text-blue-100 mb-4 font-exo">Ứng dụng quản lý công việc với giao diện đẹp mắt</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">Vue.js</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-yellow-600">Firebase</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">Tailwind</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-purple min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project3')">
-                        <div class="gradient-bg h-48 flex items-center justify-center relative">
-                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 2s;">
-                                <lottie-player 
-                                    src="https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                    background="transparent" 
-                                    speed="1" 
-                                    style="width: 100%; height: 100%;" 
-                                    loop 
-                                    autoplay>
-                                </lottie-player>
-                            </div>
-                            <span class="text-white font-rajdhani font-medium">Portfolio Website</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Portfolio Website</h4>
-                            <p class="text-blue-100 mb-4 font-exo">Website portfolio cá nhân với thiết kế hiện đại</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-red-600">HTML/CSS</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-yellow-600">JavaScript</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">Tailwind</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project4')">
-                        <div class="gradient-bg-alt h-48 flex items-center justify-center relative">
-                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 3s;">
-                                <lottie-player 
-                                    src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                    background="transparent" 
-                                    speed="1" 
-                                    style="width: 100%; height: 100%;" 
-                                    loop 
-                                    autoplay>
-                                </lottie-player>
-                            </div>
-                            <span class="text-white font-rajdhani font-medium">Weather App</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Weather App</h4>
-                            <p class="text-blue-100 mb-4 font-exo">Ứng dụng thời tiết với API real-time</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">React Native</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600">Expo</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">OpenWeather API</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 5 -->
-                    <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow-green min-w-[350px] md:min-w-[400px] cursor-pointer" onclick="window.interactions.showProjectDetails('project5')">
-                        <div class="gradient-bg h-48 flex items-center justify-center relative">
-                            <div class="w-16 h-16 opacity-60 float" style="animation-delay: 4s;">
-                                <lottie-player 
-                                    src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                    background="transparent" 
-                                    speed="1" 
-                                    style="width: 100%; height: 100%;" 
-                                    loop 
-                                    autoplay>
-                                </lottie-player>
-                            </div>
-                            <span class="text-white font-rajdhani font-medium">Chat Application</span>
-                        </div>
-                        <div class="p-6">
-                            <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">Chat Application</h4>
-                            <p class="text-blue-100 mb-4 font-exo">Ứng dụng chat real-time với WebSocket</p>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-blue-600">Socket.io</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-green-600">Express.js</span>
-                                <span class="neumorphism px-3 py-1 rounded-full text-sm font-rajdhani font-medium text-purple-600">MongoDB</span>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Projects are rendered by renderProjects.js -->
                 </div>
                 
                 <!-- Scroll Indicators -->
@@ -772,7 +440,7 @@
             <!-- Fixed Header -->
             <div class="flex justify-between items-start p-8 pb-4 border-b border-gray-700">
                 <h3 id="modalTitle" class="text-3xl font-bold text-white font-orbitron">Dự án</h3>
-                <button onclick="window.interactions.closeProjectDetails()" class="text-white hover:text-blue-300 transition-colors duration-300">
+                <button onclick="window.projects.closeProjectDetails()" class="text-white hover:text-blue-300 transition-colors duration-300">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -799,45 +467,16 @@
             <p class="text-blue-100 font-rajdhani" data-i18n="footer.copyright">&copy; 2025 Tai Tran. Tất cả quyền được bảo lưu.</p>
             
             <!-- Social Links with Floating Icons -->
-            <div class="flex justify-center space-x-6 mt-6">
-                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center neon-glow cursor-pointer transform hover:scale-110 transition-all duration-300">
-                    <div class="w-6 h-6">
-                        <lottie-player 
-                            src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                            background="transparent" 
-                            speed="1" 
-                            style="width: 100%; height: 100%;" 
-                            loop 
-                            autoplay>
-                        </lottie-player>
-                    </div>
-                </div>
-                
-                <div class="w-10 h-10 rounded-full gradient-bg-alt flex items-center justify-center neon-glow-green cursor-pointer transform hover:scale-110 transition-all duration-300">
-                    <div class="w-6 h-6">
-                        <lottie-player 
-                            src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                            background="transparent" 
-                            speed="1" 
-                            style="width: 100%; height: 100%;" 
-                            loop 
-                            autoplay>
-                        </lottie-player>
-                    </div>
-                </div>
-                
-                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center neon-glow-purple cursor-pointer transform hover:scale-110 transition-all duration-300">
-                    <div class="w-6 h-6">
-                        <lottie-player 
-                            src="https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                            background="transparent" 
-                            speed="1" 
-                            style="width: 100%; height: 100%;" 
-                            loop 
-                            autoplay>
-                        </lottie-player>
-                    </div>
-                </div>
+            <div class="flex justify-center space-x-8 mt-6">
+                <a href="https://facebook.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: linear-gradient(135deg, #1877f2 60%, #3b5998 100%);">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow-green cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.497 5.782 2.225 7.148 2.163 8.414 2.105 8.794 2.094 12 2.094m0-2.163C8.741 0 8.332.012 7.052.07 5.771.128 4.659.334 3.678 1.315c-.98.98-1.187 2.092-1.245 3.373C2.012 5.668 2 6.077 2 12c0 5.923.012 6.332.07 7.612.058 1.281.265 2.393 1.245 3.373.98.98 2.092 1.187 3.373 1.245C8.332 23.988 8.741 24 12 24s3.668-.012 4.948-.07c1.281-.058 2.393-.265 3.373-1.245.98-.98 1.187-2.092 1.245-3.373.058-1.28.07-1.689.07-7.612 0-5.923-.012-6.332-.07-7.612-.058-1.281-.265-2.393-1.245-3.373-.98-.98-2.092-1.187-3.373-1.245C15.668.012 15.259 0 12 0zm0 5.838A6.162 6.162 0 0 0 5.838 12 6.162 6.162 0 0 0 12 18.162 6.162 6.162 0 0 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.162A3.999 3.999 0 1 1 12 8a3.999 3.999 0 0 1 0 7.999zm6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow-purple cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: linear-gradient(135deg, #0077b5 60%, #0e76a8 100%);">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+                </a>
             </div>
         </div>
     </footer>

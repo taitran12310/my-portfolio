@@ -20,46 +20,32 @@
     "about": {
         "title": "About Me",
         "description": "I am a web developer with experience in building modern web applications. I am passionate about creating great user experiences and always learning new technologies.",
-        "avatar": "Avatar"
+        "avatar": "Avatar",
+        "info": {
+            "name_label": "Full Name",
+            "name": "Tran Tuan Tai",
+            "birth_label": "Year of Birth",
+            "birth": "1996",
+            "address_label": "Hometown",
+            "address": "Dong Nai",
+            "gender_label": "Gender",
+            "gender": "Male",
+            "email_label": "Email",
+            "email": "taitran12310@gmail.com",
+            "phone_label": "Phone",
+            "phone": "+84 123 456 789"
+        }
     },
     "timeline": {
         "title": "Work Experience",
-        "item1": {
-            "period": "2023 - Present",
-            "title": "Senior Frontend Developer",
-            "company": "Tech Company ABC",
-            "description": "Developing web applications with React, Vue.js"
-        },
-        "item2": {
-            "period": "2021 - 2023",
-            "title": "Full Stack Developer",
-            "company": "Startup XYZ",
-            "description": "Building full-stack web applications"
-        }
+        "expand": "Show more experience",
+        "collapse": "Collapse",
+        "responsibilities": "Main Responsibilities:",
+        "tech": "Technologies Used:",
+        "expand_more": "Show {count} more experience"
     },
     "projects": {
-        "title": "My Projects",
-        "project1": {
-            "image": "Project 1",
-            "title": "Web App Project",
-            "description": "Brief description of this project",
-            "tech1": "React",
-            "tech2": "Node.js"
-        },
-        "project2": {
-            "image": "Project 2",
-            "title": "Mobile App Project",
-            "description": "Brief description of this project",
-            "tech1": "React Native",
-            "tech2": "Firebase"
-        },
-        "project3": {
-            "image": "Project 3",
-            "title": "E-commerce Project",
-            "description": "Brief description of this project",
-            "tech1": "Vue.js",
-            "tech2": "Laravel"
-        }
+        "title": "My Projects"
     },
     "contact": {
         "title": "Contact",
@@ -75,5 +61,15 @@
     },
     "footer": {
         "copyright": "© 2025 Tai Tran. All rights reserved."
+    },
+    "project": {
+        "desc": "Description",
+        "tech": "Technologies Used",
+        "features": "Key Features",
+        "challenges": "Challenges",
+        "challenges_solutions": "Challenges & Solutions",
+        "solutions": "Solutions",
+        "demo": "View Demo",
+        "github": "GitHub"
     }
 }

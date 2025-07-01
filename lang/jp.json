@@ -20,46 +20,32 @@
     "about": {
         "title": "私について",
         "description": "私は現代的なウェブアプリケーションの構築に経験を持つウェブ開発者です。素晴らしいユーザー体験を作り出すことに情熱を持ち、常に新しい技術を学んでいます。",
-        "avatar": "プロフィール画像"
+        "avatar": "プロフィール画像",
+        "info": {
+            "name_label": "氏名",
+            "name": "チャン　トゥアン　タイ",
+            "birth_label": "生年",
+            "birth": "1996",
+            "address_label": "出身地",
+            "address": "ドン　ナイ",
+            "gender_label": "性別",
+            "gender": "男性",
+            "email_label": "メール",
+            "email": "taitran12310@gmail.com",
+            "phone_label": "電話番号",
+            "phone": "+84 123 456 789"
+        }
     },
     "timeline": {
         "title": "職歴",
-        "item1": {
-            "period": "2023 - 現在",
-            "title": "シニアフロントエンド開発者",
-            "company": "テックカンパニーABC",
-            "description": "React、Vue.jsを使用したWebアプリケーション開発"
-        },
-        "item2": {
-            "period": "2021 - 2023",
-            "title": "フルスタック開発者",
-            "company": "スタートアップXYZ",
-            "description": "フルスタックWebアプリケーションの構築"
-        }
+        "expand": "もっと経験を見る",
+        "collapse": "折りたたむ",
+        "responsibilities": "主な担当:",
+        "tech": "使用技術:",
+        "expand_more": "さらに{count}件の経験を見る"
     },
     "projects": {
-        "title": "私のプロジェクト",
-        "project1": {
-            "image": "プロジェクト1",
-            "title": "ウェブアプリプロジェクト",
-            "description": "このプロジェクトの簡単な説明",
-            "tech1": "React",
-            "tech2": "Node.js"
-        },
-        "project2": {
-            "image": "プロジェクト2",
-            "title": "モバイルアプリプロジェクト",
-            "description": "このプロジェクトの簡単な説明",
-            "tech1": "React Native",
-            "tech2": "Firebase"
-        },
-        "project3": {
-            "image": "プロジェクト3",
-            "title": "Eコマースプロジェクト",
-            "description": "このプロジェクトの簡単な説明",
-            "tech1": "Vue.js",
-            "tech2": "Laravel"
-        }
+        "title": "私のプロジェクト"
     },
     "contact": {
         "title": "お問い合わせ",
@@ -75,5 +61,15 @@
     },
     "footer": {
         "copyright": "© 2025 Tai Tran. 全著作権所有。"
+    },
+    "project": {
+        "desc": "説明",
+        "tech": "使用技術",
+        "features": "主な機能",
+        "challenges": "課題",
+        "challenges_solutions": "課題と解決策",
+        "solutions": "解決策",
+        "demo": "デモを見る",
+        "github": "GitHub"
     }
 }

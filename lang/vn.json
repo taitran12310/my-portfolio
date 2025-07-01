@@ -20,46 +20,40 @@
     "about": {
         "title": "Về tôi",
         "description": "Tôi là một nhà phát triển web với kinh nghiệm trong việc xây dựng các ứng dụng web hiện đại. Tôi đam mê tạo ra những trải nghiệm người dùng tuyệt vời và luôn tìm hiểu những công nghệ mới.",
-        "avatar": "Ảnh đại diện"
+        "avatar": "Ảnh đại diện",
+        "info": {
+            "name_label": "Họ tên",
+            "name": "Trần Tuấn Tài",
+            "birth_label": "Năm sinh",
+            "birth": "1996",
+            "address_label": "Quê quán",
+            "address": "Đồng Nai",
+            "gender_label": "Giới tính",
+            "gender": "Nam",
+            "email_label": "Email",
+            "email": "taitran12310@gmail.com",
+            "phone_label": "Số điện thoại",
+            "phone": "+84 123 456 789"
+        }
     },
     "timeline": {
         "title": "Kinh nghiệm làm việc",
-        "item1": {
-            "period": "2023 - Hiện tại",
-            "title": "Senior Frontend Developer",
-            "company": "Tech Company ABC",
-            "description": "Phát triển ứng dụng web với React, Vue.js"
-        },
-        "item2": {
-            "period": "2021 - 2023",
-            "title": "Full Stack Developer",
-            "company": "Startup XYZ",
-            "description": "Xây dựng ứng dụng web full-stack"
-        }
+        "expand": "Xem thêm kinh nghiệm",
+        "collapse": "Thu gọn",
+        "responsibilities": "Trách nhiệm chính:",
+        "tech": "Công nghệ sử dụng:",
+        "expand_more": "Xem thêm {count} kinh nghiệm"
     },
     "projects": {
         "title": "Dự án của tôi",
-        "project1": {
-            "image": "Dự án 1",
-            "title": "Dự án Web App",
-            "description": "Mô tả ngắn về dự án này",
-            "tech1": "React",
-            "tech2": "Node.js"
-        },
-        "project2": {
-            "image": "Dự án 2",
-            "title": "Dự án Mobile App",
-            "description": "Mô tả ngắn về dự án này",
-            "tech1": "React Native",
-            "tech2": "Firebase"
-        },
-        "project3": {
-            "image": "Dự án 3",
-            "title": "Dự án E-commerce",
-            "description": "Mô tả ngắn về dự án này",
-            "tech1": "Vue.js",
-            "tech2": "Laravel"
-        }
+        "desc": "Mô tả",
+        "tech": "Công nghệ sử dụng",
+        "features": "Tính năng chính",
+        "challenges": "Thách thức",
+        "challenges_solutions": "Thách thức & Giải pháp",
+        "solutions": "Giải pháp",
+        "demo": "Xem Demo",
+        "github": "GitHub"
     },
     "contact": {
         "title": "Liên hệ",

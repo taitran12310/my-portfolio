@@ -1,0 +1,144 @@
+[
+  {
+    "title": "ECプラットフォーム",
+    "description": "フル機能を備えた最新のECプラットフォーム",
+    "longDescription": "ECプラットフォームは、最新技術で開発された完全なECシステムです。主な機能は、商品管理、カート、決済、注文管理、管理者ダッシュボードなどです。",
+    "features": [
+      "レスポンシブで使いやすいUI",
+      "安全な登録・ログインシステム",
+      "画像と詳細説明付きの商品管理",
+      "カートとオンライン決済",
+      "注文管理とステータス追跡",
+      "レビュー・コメント機能",
+      "詳細な統計付き管理者ダッシュボード"
+    ],
+    "challenges": [
+      "大量データでのパフォーマンス最適化",
+      "決済情報のセキュリティ",
+      "複数注文の同時処理",
+      "複数決済ゲートウェイの統合"
+    ],
+    "solutions": [
+      "Redisによるデータキャッシュ",
+      "決済のためのSSL/TLS暗号化",
+      "注文処理のためのキューシステム",
+      "決済統合のためのAPIゲートウェイ"
+    ],
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["React", "Node.js", "MongoDB"],
+    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "タスク管理アプリ",
+    "description": "美しいUIのタスク管理アプリケーション",
+    "longDescription": "タスク管理アプリは、タスクやプロジェクトを効率的に管理できるWebアプリです。チームワーク、進捗管理、締め切り管理をサポートします。",
+    "features": [
+      "締め切り付きタスクの作成・管理",
+      "チームメンバーへのタスク割り当て",
+      "カンバンボードで進捗管理",
+      "リアルタイム通知",
+      "レポート・統計",
+      "カレンダー連携"
+    ],
+    "challenges": [
+      "リアルタイムデータ同期",
+      "アクセス権管理",
+      "モバイル向けUX最適化"
+    ],
+    "solutions": [
+      "Firebase Realtime Database",
+      "ロールベースのアクセス制御",
+      "プログレッシブWebアプリ（PWA）"
+    ],
+    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["Vue.js", "Firebase", "Tailwind"],
+    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "ポートフォリオサイト",
+    "description": "モダンなデザインの個人ポートフォリオサイト",
+    "longDescription": "ポートフォリオサイトは、モダンでレスポンシブなデザインと滑らかなアニメーション効果を備えています。プロジェクト、スキル、職務経験を紹介します。",
+    "features": [
+      "美しいレスポンシブUI",
+      "滑らかなアニメーション効果",
+      "ダーク/ライトテーマ",
+      "多言語対応（VN/EN/JP）",
+      "経験タイムライン",
+      "お問い合わせフォーム"
+    ],
+    "challenges": [
+      "パフォーマンス最適化",
+      "クロスブラウザ互換性",
+      "SEO最適化"
+    ],
+    "solutions": [
+      "遅延読み込みとコード分割",
+      "CSSフォールバックとポリフィル",
+      "メタタグと構造化データ"
+    ],
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
+    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "天気アプリ",
+    "description": "リアルタイムAPI対応の天気アプリケーション",
+    "longDescription": "天気アプリは、リアルタイムの天気情報と正確な予報を提供します。美しく使いやすいインターフェースを備えています。",
+    "features": [
+      "リアルタイム天気",
+      "7日間予報",
+      "自動位置情報取得",
+      "天気通知",
+      "ホーム画面ウィジェット"
+    ],
+    "challenges": [
+      "APIコールの最適化",
+      "位置情報権限の処理",
+      "オフライン機能"
+    ],
+    "solutions": [
+      "AsyncStorageによるキャッシュ",
+      "位置情報権限のリクエスト",
+      "オフライン対応のService Worker"
+    ],
+    "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["React Native", "Expo", "OpenWeather API"],
+    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  },
+  {
+    "title": "チャットアプリケーション",
+    "description": "WebSocket対応のリアルタイムチャットアプリ",
+    "longDescription": "チャットアプリケーションは、グループ作成、ファイル共有、ビデオ通話ができるリアルタイムチャットアプリです。WebSocketを利用して高速なメッセージ配信を実現しています。",
+    "features": [
+      "リアルタイムチャット",
+      "グループチャット作成",
+      "ファイル・画像共有",
+      "ビデオ通話",
+      "絵文字・リアクション",
+      "メッセージ検索"
+    ],
+    "challenges": [
+      "WebSocket接続の処理",
+      "ファイルアップロード・ストレージ",
+      "ビデオ通話の品質"
+    ],
+    "solutions": [
+      "コネクションプーリング",
+      "クラウドストレージ（AWS S3）",
+      "WebRTC最適化"
+    ],
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["Socket.io", "Express.js", "MongoDB"],
+    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+  }
+] 
