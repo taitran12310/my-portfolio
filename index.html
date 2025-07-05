@@ -38,7 +38,19 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center h-full">
-                    <a href="/" class="text-xl font-bold text-white font-orbitron glow-text" data-i18n="header.title">My Portfolio</a>
+                    <a href="/" class="text-xl font-bold text-white font-orbitron glow-text flex items-center justify-center">
+                        <div class="w-48 h-16">
+                            <lottie-player 
+                                src="assets/lottiefiles/Logo.json" 
+                                background="transparent" 
+                                speed="1" 
+                                style="width: 100%; height: 100%;" 
+                                loop 
+                                autoplay>
+                            </lottie-player>
+                        </div>
+                        My Portfolio
+                    </a>
                 </div>
                 <!-- Nút language và theme cho mobile (ẩn trên desktop) -->
                 <div class="flex items-center h-full gap-2 md:hidden">
@@ -71,11 +83,11 @@
                     </button>
                 </div>
                 <div class="flex items-center space-x-6 nav-desktop md:flex hidden" id="navDesktop">
-                    <a href="#home" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.home">Trang chủ</a>
-                    <a href="#about" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.about">Giới thiệu</a>
-                    <a href="#timeline" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.timeline">Kinh nghiệm</a>
-                    <a href="#projects" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.projects">Dự án</a>
-                    <a href="#contact" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg" data-i18n="nav.contact">Liên hệ</a>
+                    <a href="#home" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.home">Trang chủ</a>
+                    <a href="#about" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.about">Giới thiệu</a>
+                    <a href="#timeline" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.timeline">Kinh nghiệm</a>
+                    <a href="#projects" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.projects">Dự án</a>
+                    <a href="#contact" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.contact">Liên hệ</a>
                     <!-- Language Dropdown -->
                     <div class="language-dropdown" id="languageDropdown">
                         <button class="language-dropdown-toggle rounded-full" id="languageDropdownToggle" aria-label="Select language">
@@ -125,12 +137,12 @@
                 <p class="text-xl text-blue-100 mb-10 font-exo leading-relaxed" data-i18n="hero.subtitle">Tôi là một nhà phát triển web đam mê sáng tạo</p>
                 
                 <!-- Animated Button with Neumorphism -->
-                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow ripple" data-i18n="hero.cta" onclick="scrollToProjects()">
+                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow ripple" onclick="scrollToProjects()">
                     <span class="flex items-center space-x-2">
-                        <span>Xem dự án của tôi</span>
-                        <div class="w-6 h-6">
+                        <span data-i18n="hero.cta">Xem dự án của tôi</span>
+                        <div class="w-14 h-15">
                             <lottie-player 
-                                src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                src="/assets/lottiefiles/OpenProject.json" 
                                 background="transparent" 
                                 speed="1" 
                                 style="width: 100%; height: 100%;" 
@@ -143,25 +155,25 @@
 
                 <!-- Floating Lottie Animation -->
                 <div class="absolute -bottom-5 right-0 w-48 h-48 opacity-60 float">
-                    <dotlottie-player
-                        src="https://lottie.host/6c5c2d75-d2bf-4817-94b4-761e9b8ea0b5/cB7hcAuLUE.lottie"
+                    <lottie-player
+                        src="/assets/lottiefiles/Home1.json"
                         background="transparent"
                         speed="1"
                         style="width: 100%; height: 100%"
                         loop
                         autoplay
-                    ></dotlottie-player>
+                    ></lottie-player>
                 </div>
                 
                 <div class="absolute -bottom-5 left-0 w-48 h-48 opacity-60 float" style="animation-delay: 2s;">
-                    <dotlottie-player
-                        src="https://lottie.host/f39bed47-48d0-4947-8c90-84b90a7224cb/0U4tN3aKV4.lottie"
+                    <lottie-player
+                        src="/assets/lottiefiles/Home2.json"
                         background="transparent"
                         speed="1"
                         style="width: 100%; height: 100%"
                         loop
                         autoplay
-                    ></dotlottie-player>
+                    ></lottie-player>
                 </div>
             </div>
             
@@ -201,14 +213,14 @@
                         
                         <!-- Floating Icons -->
                         <div class="absolute top-4 right-4 w-24 h-24 opacity-60 float">
-                            <dotlottie-player
-                                src="https://lottie.host/71a463b3-c78b-4f9a-b2a2-b186d47cafd2/2mq3eI4Vnq.lottie"
+                            <lottie-player
+                                src="/assets/lottiefiles/Infomation.json"
                                 background="transparent"
                                 speed="1"
                                 style="width: 100%; height: 100%"
                                 loop
                                 autoplay
-                            ></dotlottie-player>
+                            ></lottie-player>
                         </div>
                     </div>
                 </div>
@@ -371,14 +383,14 @@
             <div class="p-6">
                 <div class="text-center mb-6">
                     <div class="w-48 h-48 mx-auto mb-4">
-                        <dotlottie-player
-                            src="https://lottie.host/ffa89aea-6dbc-43ad-b5c9-54bb48ff0a1a/M81bBmGYhX.lottie"
+                        <lottie-player
+                            src="/assets/lottiefiles/Development.json"
                             background="transparent"
                             speed="1"
                             style="width: 100%; height: 100%"
                             loop
                             autoplay
-                        ></dotlottie-player>
+                        ></lottie-player>
                     </div>
                     <p class="text-blue-100 font-exo text-lg mb-4" data-i18n="development.message">Chức năng gửi tin nhắn đang được phát triển và sẽ sớm ra mắt!</p>
                     <p class="text-blue-200 font-exo text-sm" data-i18n="development.submessage">Cảm ơn bạn đã quan tâm đến portfolio của tôi.</p>
