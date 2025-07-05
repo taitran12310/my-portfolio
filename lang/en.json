@@ -62,6 +62,12 @@
     "footer": {
         "copyright": "© 2025 Tai Tran. All rights reserved."
     },
+    "development": {
+        "title": "🚧 Feature Under Development",
+        "message": "The message sending feature is currently under development and will be available soon!",
+        "submessage": "Thank you for your interest in my portfolio.",
+        "close": "Close"
+    },
     "project": {
         "desc": "Description",
         "tech": "Technologies Used",

@@ -62,6 +62,12 @@
     "footer": {
         "copyright": "© 2025 Tai Tran. 全著作権所有。"
     },
+    "development": {
+        "title": "🚧 機能開発中",
+        "message": "メッセージ送信機能は現在開発中で、近日公開予定です！",
+        "submessage": "私のポートフォリオにご興味いただき、ありがとうございます。",
+        "close": "閉じる"
+    },
     "project": {
         "desc": "説明",
         "tech": "使用技術",

@@ -63,6 +63,23 @@ function getAboutInfo() {
     return getLangText("about.info", defaultValue);
 }
 
+// Development popup functions
+function showDevelopmentPopup() {
+    const popup = document.getElementById('developmentPopup');
+    if (popup) {
+        popup.classList.remove('hidden');
+        popup.classList.add('flex');
+    }
+}
+
+function closeDevelopmentPopup() {
+    const popup = document.getElementById('developmentPopup');
+    if (popup) {
+        popup.classList.add('hidden');
+        popup.classList.remove('flex');
+    }
+}
+
 // Xuất ra window để file khác dùng
 window.common = {
     getLangText,
@@ -70,3 +87,7 @@ window.common = {
     getNestedValue,
     getAboutInfo
 };
+
+// Development popup functions
+window.showDevelopmentPopup = showDevelopmentPopup;
+window.closeDevelopmentPopup = closeDevelopmentPopup;

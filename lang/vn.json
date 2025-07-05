@@ -69,5 +69,11 @@
     },
     "footer": {
         "copyright": "© 2025 Tai Tran. Tất cả quyền được bảo lưu."
+    },
+    "development": {
+        "title": "🚧 Chức năng đang phát triển",
+        "message": "Chức năng gửi tin nhắn đang được phát triển và sẽ sớm ra mắt!",
+        "submessage": "Cảm ơn bạn đã quan tâm đến portfolio của tôi.",
+        "close": "Đóng"
     }
 }
