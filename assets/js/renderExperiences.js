@@ -117,7 +117,28 @@ function addMoreExperiences() {
 }
 
 function updateExpandButton() {
-    const btn = document.getElementById('expandTimelineBtn');
+    let btn = document.getElementById('expandTimelineBtn');
+    const container = document.getElementById('timelineBtnContainer');
+    if (allExperiences.length < MAX_SHOW_COUNT) {
+        // Lấy phần tử cha của nút và xóa nội dung bên trong
+        container.innerHTML = null;
+        return;
+    } else {
+        if (!btn) {
+            const expandBtn = `
+            <button id="expandTimelineBtn" class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow">
+                <span class="flex items-center space-x-2">
+                    <span id="expandBtnText">${window.common ? window.common.getLangText('timeline.expand', 'Xem thêm kinh nghiệm') : 'Xem thêm kinh nghiệm'}</span>
+                    <svg id="expandBtnIcon" class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </span>
+            </button>`;
+            container.innerHTML = expandBtn;
+            btn = document.getElementById('expandTimelineBtn');
+            if (btn) btn.onclick = handleExpandTimeline;
+        }
+    };
     if (btn) {
         if (currentShowCount >= allExperiences.length) {
             btn.querySelector('#expandBtnText').textContent = window.common.getLangText('timeline.collapse', 'Thu gọn');
