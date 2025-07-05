@@ -18,6 +18,7 @@
     
     <!-- LottieFiles -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
 
     <!-- Common JS Functions -->
@@ -27,6 +28,7 @@
     <!-- Render JS -->
     <script src="assets/js/renderProjects.js"></script>
     <script src="assets/js/renderExperiences.js"></script>
+    <script src="assets/js/renderSkills.js"></script>
 
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
@@ -118,29 +120,6 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <!-- Hero Section -->
         <section id="home" class="text-center py-20 relative">
-            <!-- Floating Lottie Animation -->
-            <div class="absolute top-10 right-10 w-32 h-32 opacity-30 float">
-                <lottie-player 
-                    src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                    background="transparent" 
-                    speed="1" 
-                    style="width: 100%; height: 100%;" 
-                    loop 
-                    autoplay>
-                </lottie-player>
-            </div>
-            
-            <div class="absolute top-20 left-10 w-24 h-24 opacity-30 float" style="animation-delay: 2s;">
-                <lottie-player 
-                    src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                    background="transparent" 
-                    speed="1" 
-                    style="width: 100%; height: 100%;" 
-                    loop 
-                    autoplay>
-                </lottie-player>
-            </div>
-            
             <div class="glass rounded-3xl p-12 max-w-4xl mx-auto relative overflow-hidden">
                 <h2 class="text-5xl font-bold text-white mb-6 font-orbitron glow-text" data-i18n="hero.title">Chào mừng đến với Portfolio của tôi</h2>
                 <p class="text-xl text-blue-100 mb-10 font-exo leading-relaxed" data-i18n="hero.subtitle">Tôi là một nhà phát triển web đam mê sáng tạo</p>
@@ -151,7 +130,7 @@
                         <span>Xem dự án của tôi</span>
                         <div class="w-6 h-6">
                             <lottie-player 
-                                src="https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
                                 background="transparent" 
                                 speed="1" 
                                 style="width: 100%; height: 100%;" 
@@ -161,7 +140,31 @@
                         </div>
                     </span>
                 </button>
+
+                <!-- Floating Lottie Animation -->
+                <div class="absolute -bottom-5 right-0 w-48 h-48 opacity-60 float">
+                    <dotlottie-player
+                        src="https://lottie.host/6c5c2d75-d2bf-4817-94b4-761e9b8ea0b5/cB7hcAuLUE.lottie"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                    ></dotlottie-player>
+                </div>
+                
+                <div class="absolute -bottom-5 left-0 w-48 h-48 opacity-60 float" style="animation-delay: 2s;">
+                    <dotlottie-player
+                        src="https://lottie.host/f39bed47-48d0-4947-8c90-84b90a7224cb/0U4tN3aKV4.lottie"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                    ></dotlottie-player>
+                </div>
             </div>
+            
         </section>
 
         <!-- Section Divider -->
@@ -183,106 +186,7 @@
                     </p>
                     
                     <!-- Skills with Neumorphism -->
-                    <div class="mt-8 space-y-4">
-                        <div class="skill-item neumorphism rounded-xl p-4" data-skill="frontend">
-                            <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="window.interactions.toggleSkill('frontend')">
-                                <span class="font-rajdhani font-semibold text-gray-700">Frontend Development</span>
-                                <div class="flex items-center">
-                                    <span class="text-blue-600 font-bold mr-2">90%</span>
-                                    <svg class="expand-indicator w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full" style="width: 90%"></div>
-                            </div>
-                            <div class="skill-children">
-                                <div class="child-skill">
-                                    <span class="child-skill-name">React.js</span>
-                                    <span class="child-skill-level">Expert</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Vue.js</span>
-                                    <span class="child-skill-level">Advanced</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">TypeScript</span>
-                                    <span class="child-skill-level">Advanced</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Tailwind CSS</span>
-                                    <span class="child-skill-level">Expert</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item neumorphism rounded-xl p-4" data-skill="backend">
-                            <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="window.interactions.toggleSkill('backend')">
-                                <span class="font-rajdhani font-semibold text-gray-700">Backend Development</span>
-                                <div class="flex items-center">
-                                    <span class="text-green-600 font-bold mr-2">85%</span>
-                                    <svg class="expand-indicator w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-green-500 to-blue-600 h-2 rounded-full" style="width: 85%"></div>
-                            </div>
-                            <div class="skill-children">
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Node.js</span>
-                                    <span class="child-skill-level">Advanced</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Express.js</span>
-                                    <span class="child-skill-level">Advanced</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">MongoDB</span>
-                                    <span class="child-skill-level">Intermediate</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">PostgreSQL</span>
-                                    <span class="child-skill-level">Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item neumorphism rounded-xl p-4" data-skill="design">
-                            <div class="flex items-center justify-between mb-2 cursor-pointer" onclick="window.interactions.toggleSkill('design')">
-                                <span class="font-rajdhani font-semibold text-gray-700">UI/UX Design</span>
-                                <div class="flex items-center">
-                                    <span class="text-purple-600 font-bold mr-2">80%</span>
-                                    <svg class="expand-indicator w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-2 rounded-full" style="width: 80%"></div>
-                            </div>
-                            <div class="skill-children">
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Figma</span>
-                                    <span class="child-skill-level">Advanced</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Adobe XD</span>
-                                    <span class="child-skill-level">Intermediate</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Sketch</span>
-                                    <span class="child-skill-level">Basic</span>
-                                </div>
-                                <div class="child-skill">
-                                    <span class="child-skill-name">Prototyping</span>
-                                    <span class="child-skill-level">Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="skillsContainer"></div>
                 </div>
                 
                 <div class="glass rounded-3xl p-8 flex items-center justify-center relative overflow-hidden">
@@ -296,26 +200,15 @@
                         <div id="aboutInfoBox" class="flex flex-col justify-between h-full text-left font-rajdhani text-blue-200 text-lg font-semibold mb-4"></div>
                         
                         <!-- Floating Icons -->
-                        <div class="absolute top-4 right-4 w-8 h-8 opacity-60 float">
-                            <lottie-player 
-                                src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style="width: 100%; height: 100%;" 
-                                loop 
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                        
-                        <div class="absolute bottom-4 left-4 w-6 h-6 opacity-60 float" style="animation-delay: 1s;">
-                            <lottie-player 
-                                src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style="width: 100%; height: 100%;" 
-                                loop 
-                                autoplay>
-                            </lottie-player>
+                        <div class="absolute top-4 right-4 w-24 h-24 opacity-60 float">
+                            <dotlottie-player
+                                src="https://lottie.host/71a463b3-c78b-4f9a-b2a2-b186d47cafd2/2mq3eI4Vnq.lottie"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%"
+                                loop
+                                autoplay
+                            ></dotlottie-player>
                         </div>
                     </div>
                 </div>
@@ -418,7 +311,7 @@
                                 <span>Gửi tin nhắn</span>
                                 <div class="w-5 h-5">
                                     <lottie-player 
-                                        src="https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json" 
+                                        src="https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json" 
                                         background="transparent" 
                                         speed="1" 
                                         style="width: 100%; height: 100%;" 

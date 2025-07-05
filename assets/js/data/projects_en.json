@@ -28,7 +28,7 @@
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["React", "Node.js", "MongoDB"],
-    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
   },
   {
     "title": "Task Management App",
@@ -56,7 +56,7 @@
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["Vue.js", "Firebase", "Tailwind"],
-    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
   },
   {
     "title": "Portfolio Website",
@@ -84,7 +84,7 @@
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
-    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
   },
   {
     "title": "Weather App",
@@ -111,7 +111,7 @@
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["React Native", "Expo", "OpenWeather API"],
-    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
   },
   {
     "title": "Chat Application",
@@ -139,6 +139,6 @@
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["Socket.io", "Express.js", "MongoDB"],
-    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
   }
 ] 
