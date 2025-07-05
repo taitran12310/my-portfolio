@@ -1,0 +1,79 @@
+{
+    "page": {
+        "title": "My Portfolio"
+    },
+    "header": {
+        "title": "My Portfolio"
+    },
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "timeline": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "title": "Welcome to My Portfolio",
+        "subtitle": "I am a passionate web developer",
+        "cta": "View My Projects"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "I am a developer with experience in building both web and mobile applications. I am passionate about creating great user experiences and constantly learning and exploring new technologies.",
+        "avatar": "Avatar",
+        "info": {
+            "name_label": "Full Name",
+            "name": "Tran Tuan Tai",
+            "birth_label": "Year of Birth",
+            "birth": "****",
+            "address_label": "Hometown",
+            "address": "Dong Nai",
+            "gender_label": "Gender",
+            "gender": "Male",
+            "email_label": "Email",
+            "email": "taitran*****@gmail.com",
+            "phone_label": "Phone",
+            "phone": "+84 975 *** 310"
+        }
+    },
+    "timeline": {
+        "title": "Work Experience",
+        "expand": "Show more experience",
+        "collapse": "Collapse",
+        "responsibilities": "Main Responsibilities:",
+        "tech": "Technologies Used:",
+        "expand_more": "Show {count} more experience"
+    },
+    "contact": {
+        "title": "Contact",
+        "form": {
+            "name": "Full Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message",
+            "name_placeholder": "Enter your full name",
+            "email_placeholder": "Enter your email",
+            "message_placeholder": "Enter your message"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Tai Tran. All rights reserved."
+    },
+    "development": {
+        "title": "🚧 Feature Under Development",
+        "message": "The message sending feature is currently under development and will be available soon!",
+        "submessage": "Thank you for your interest in my portfolio.",
+        "close": "Close"
+    },
+    "project": {
+        "title": "My Projects",
+        "desc": "Description",
+        "tech": "Technologies Used",
+        "features": "Key Features",
+        "challenges": "Challenges",
+        "challenges_solutions": "Challenges & Solutions",
+        "solutions": "Solutions",
+        "demo": "View Demo",
+        "github": "GitHub"
+    }
+}

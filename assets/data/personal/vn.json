@@ -1,0 +1,79 @@
+{
+    "page": {
+        "title": "My Portfolio"
+    },
+    "header": {
+        "title": "My Portfolio"
+    },
+    "nav": {
+        "home": "Trang chủ",
+        "about": "Giới thiệu",
+        "timeline": "Kinh nghiệm",
+        "projects": "Dự án",
+        "contact": "Liên hệ"
+    },
+    "hero": {
+        "title": "Chào mừng đến với Portfolio của tôi",
+        "subtitle": "Tôi là một nhà phát triển web đam mê sáng tạo",
+        "cta": "Xem dự án của tôi"
+    },
+    "about": {
+        "title": "Về tôi",
+        "description": "Tôi là một nhà phát triển với kinh nghiệm trong việc xây dựng cả ứng dụng web và ứng dụng di động. Tôi đam mê tạo ra những trải nghiệm người dùng tuyệt vời và luôn không ngừng học hỏi, khám phá các công nghệ mới.",
+        "avatar": "Ảnh đại diện",
+        "info": {
+            "name_label": "Họ tên",
+            "name": "Trần Tuấn Tài",
+            "birth_label": "Năm sinh",
+            "birth": "****",
+            "address_label": "Quê quán",
+            "address": "Đồng Nai",
+            "gender_label": "Giới tính",
+            "gender": "Nam",
+            "email_label": "Email",
+            "email": "taitran*****@gmail.com",
+            "phone_label": "Số điện thoại",
+            "phone": "+84 975 *** 310"
+        }
+    },
+    "timeline": {
+        "title": "Kinh nghiệm làm việc",
+        "expand": "Xem thêm kinh nghiệm",
+        "collapse": "Thu gọn",
+        "responsibilities": "Trách nhiệm chính:",
+        "tech": "Công nghệ sử dụng:",
+        "expand_more": "Xem thêm {count} kinh nghiệm"
+    },
+    "project": {
+        "title": "Dự án của tôi",
+        "desc": "Mô tả",
+        "tech": "Công nghệ sử dụng",
+        "features": "Tính năng chính",
+        "challenges": "Thách thức",
+        "challenges_solutions": "Thách thức & Giải pháp",
+        "solutions": "Giải pháp",
+        "demo": "Xem Demo",
+        "github": "GitHub"
+    },
+    "contact": {
+        "title": "Liên hệ",
+        "form": {
+            "name": "Họ tên",
+            "email": "Email",
+            "message": "Tin nhắn",
+            "submit": "Gửi tin nhắn",
+            "name_placeholder": "Nhập họ tên của bạn",
+            "email_placeholder": "Nhập email của bạn",
+            "message_placeholder": "Nhập tin nhắn của bạn"
+        }
+    },
+    "footer": {
+        "copyright": "© 2025 Tai Tran. Tất cả quyền được bảo lưu."
+    },
+    "development": {
+        "title": "🚧 Chức năng đang phát triển",
+        "message": "Chức năng gửi tin nhắn đang được phát triển và sẽ sớm ra mắt!",
+        "submessage": "Cảm ơn bạn đã quan tâm đến portfolio của tôi.",
+        "close": "Đóng"
+    }
+}

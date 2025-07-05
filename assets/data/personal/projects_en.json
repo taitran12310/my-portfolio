@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Logistic",
+    "description": "Participated in backend development project for Japanese logistics client",
+    "longDescription": "The Logistic Platform project is a large system consisting of multiple components (Frontend, Backend, Cloud, etc.). Collaborated with the Japanese team to handle backend processing.",
+    "features": [
+      "Synchronize data between component systems.",
+      "Process data by batch for parts:",
+      " + Create order information.",
+      " + Shipping history.",
+      " + Orders requesting delivery date/time, redelivery",
+      " + ..."
+    ],
+    "challenges": [
+      "Optimize performance with large data volumes",
+      "The system is very large but the corresponding part is only a small part, so we need to consider the level of impact",
+      "The system uses a self-built Framework, so understanding the Framework requires a long time",
+      "The system includes many teams working simultaneously, so deadlines are quite strict."
+    ],
+    "solutions": [
+      "Add performance check steps to identify bottlenecks, then improve performance.",
+      "During the work process, we must always communicate with people in the team and communicate with parties to limit the level of impact."
+    ],
+    "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "githubUrl": null,
+    "tags": ["Java", "Shell Bash", "PostgreSQL"],
+    "lottie": "assets/lottiefiles/Logistic.json"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Personal portfolio website with modern design",
+    "longDescription": "Portfolio Website is designed with a modern, responsive interface and smooth animation effects. The website showcases projects, skills, and work experience.",
+    "features": [
+      "Beautiful responsive interface",
+      "Smooth animation effects",
+      "Dark/Light theme",
+      "Multi-language (VN/EN/JP)",
+      "Experience timeline",
+      "Contact form"
+    ],
+    "challenges": [
+      "Performance optimization",
+      "Cross-browser compatibility",
+      "SEO optimization"
+    ],
+    "solutions": [
+      "Lazy loading and code splitting",
+      "CSS fallbacks and polyfills",
+      "Meta tags and structured data"
+    ],
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
+    "lottie": "assets/lottiefiles/Home2.json"
+  }
+] 

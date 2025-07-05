@@ -1,0 +1,88 @@
+[
+  {
+    "title": "Logistic",
+    "description": "Tham gia dự án phát triển backend cho khách hàng logistic Nhật Bản",
+    "longDescription": "Dự án Logistic Platform là một hệ thống lớn bao gốm nhiều phần (Frontend, Backend, Cloud,...). Cùng tham gia với team Nhật Bản để đối ứng về các xử lý backend.",
+    "features": [
+      "・Đồng bộ data giữa các hệ thống thành phần.",
+      "・Xử lý data bằng batch cho các phần:",
+      "　+ Tạo thông tin đơn hàng.",
+      "　+ Lịch sử vận đơn.",
+      "　+ Các đơn yêu cầu ngày giờ giao hàng, giao lại hàng",
+      "　+ ..."
+    ],
+    "challenges": [
+      "Tối ưu hóa hiệu suất với lượng dữ liệu lớn",
+      "Hệ thống rất lớn nhưng phần đối ứng chỉ là một phần nhỏ trong đó nên cần cân nhắc mức độ ảnh hưởng",
+      "Hệ thống sử dụng Framework tự build nên việc nắm rõ Framework cần thời gian dài",
+      "Hệ thống bao gồm nhiều team cùng làm đồng thời nên deadline khá khắt khe."
+    ],
+    "solutions": [
+      "Thêm các bước kiểm tra hiệu suất để xác định những điểm nghẽn, từ đó cải thiện hiệu suất.",
+      "Trong quá trình làm, phải luôn trao đổi với người trong team và trao đổi với các bên để hạn chế mức độ ảnh hưởng."
+    ],
+    "image": "assets/img/logistic_detail.jpg",
+    "demoUrl": null,
+    "githubUrl": null,
+    "tags": ["Java", "Shell Bash", "PostgreSQL"],
+    "lottie": "assets/lottiefiles/Logistic.json"
+  },
+  {
+    "title": "Portfolio Website",
+    "description": "Website portfolio cá nhân với thiết kế hiện đại",
+    "longDescription": "Portfolio Website được thiết kế với giao diện hiện đại, responsive và các hiệu ứng animation mượt mà. Website showcase các dự án, kỹ năng và kinh nghiệm làm việc.",
+    "features": [
+      "・Giao diện responsive đẹp mắt",
+      "・Hiệu ứng animation mượt mà",
+      "・Dark/Light theme",
+      "・Đa ngôn ngữ (VN/EN/JP)",
+      "・Timeline kinh nghiệm",
+      "・Contact form"
+    ],
+    "challenges": [
+      "Tối ưu performance",
+      "Cross-browser compatibility",
+      "SEO optimization"
+    ],
+    "solutions": [
+      "Lazy loading và code splitting",
+      "CSS fallbacks và polyfills",
+      "Meta tags và structured data"
+    ],
+    "image": "assets/img/portfolio_detail.jpg",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
+    "lottie": "assets/lottiefiles/Home2.json"
+  },
+  {
+    "title": "My Tools",
+    "description": "Hệ thống tổng hợp các công cụ tiện ích cá nhân phục vụ cho công việc và học tập.",
+    "longDescription": "My Tools là một website tập hợp nhiều công cụ nhỏ như chuyển đổi định dạng, tạo mã QR, kiểm tra regex, tạo mật khẩu mạnh, chuyển đổi màu sắc, và nhiều tiện ích khác. Hệ thống được xây dựng với mục tiêu giúp người dùng tiết kiệm thời gian và nâng cao hiệu suất làm việc thông qua giao diện đơn giản, dễ sử dụng và hoàn toàn miễn phí.",
+    "features": [
+      "・Tạo mã QR nhanh chóng",
+      "・Chuyển đổi định dạng văn bản (JSON, XML, CSV, ...)",
+      "・Kiểm tra và tạo Regex",
+      "・Tạo mật khẩu ngẫu nhiên mạnh",
+      "・Chuyển đổi mã màu (HEX, RGB, HSL, ...)",
+      "・Công cụ đếm ký tự, từ, dòng",
+      "・Giao diện thân thiện, responsive",
+      "・Không cần đăng nhập, sử dụng miễn phí"
+    ],
+    "challenges": [
+      "Tích hợp nhiều công cụ khác nhau trên cùng một nền tảng",
+      "Đảm bảo hiệu suất và trải nghiệm người dùng mượt mà",
+      "Thiết kế giao diện đơn giản nhưng vẫn hiện đại, dễ sử dụng"
+    ],
+    "solutions": [
+      "Tách biệt từng công cụ thành các module độc lập để dễ bảo trì và mở rộng",
+      "Sử dụng React và tối ưu hóa rendering để tăng tốc độ tải trang",
+      "Áp dụng thiết kế tối giản, tập trung vào trải nghiệm người dùng"
+    ],
+    "image": "assets/img/tool_detail.jpg",
+    "demoUrl": null,
+    "githubUrl": null,
+    "tags": ["React", "JavaScript", "Tailwind", "Utility"],
+    "lottie": "assets/lottiefiles/Tools.json"
+  }
+]

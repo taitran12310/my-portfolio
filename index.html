@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">My Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;900&family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- LottieFiles -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+    <!-- Common JS Functions -->
+    <script src="assets/js/common.js"></script>
+    <!-- Custom Tailwind Config -->
+    <script src="assets/js/main.js" defer></script>
+    <!-- Render JS -->
+    <script src="assets/js/renderProjects.js"></script>
+    <script src="assets/js/renderExperiences.js"></script>
+    <script src="assets/js/renderSkills.js"></script>
+
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+</head>
+<body class="animated-bg min-h-screen">
+    <!-- Header -->
+    <header class="glass sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center h-full">
+                    <a href="/" class="text-xl font-bold text-white font-orbitron glow-text flex items-center justify-center">
+                        <div class="w-32 h-12 md:w-48 md:h-16">
+                            <lottie-player 
+                                src="assets/lottiefiles/Logo.json" 
+                                background="transparent" 
+                                speed="1" 
+                                style="width: 100%; height: 100%;" 
+                                loop 
+                                autoplay>
+                            </lottie-player>
+                        </div>
+                        <span data-i18n="header.title">My Portfolio</span>
+                    </a>
+                </div>
+                <!-- Nút language và theme cho mobile (ẩn trên desktop) -->
+                <div class="flex items-center h-full gap-2 md:hidden">
+                    <div class="language-dropdown" id="languageDropdownMobile">
+                        <button class="language-dropdown-toggle w-12 h-12 p-0 rounded-full border border-cyan-400 bg-white/30 backdrop-blur shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-200" id="languageDropdownToggleMobile" aria-label="Select language">
+                            <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon current-flag" id="currentFlagMobile">
+                        </button>
+                        <div class="language-dropdown-menu" id="languageDropdownMenuMobile">
+                            <button class="language-option" data-lang="vn" data-flag="https://flagcdn.com/w80/vn.png">
+                                <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon">
+                            </button>
+                            <button class="language-option" data-lang="en" data-flag="https://flagcdn.com/w80/gb.png">
+                                <img src="https://flagcdn.com/w80/gb.png" alt="English" class="flag-icon">
+                            </button>
+                            <button class="language-option" data-lang="jp" data-flag="https://flagcdn.com/w80/jp.png">
+                                <img src="https://flagcdn.com/w80/jp.png" alt="Japanese" class="flag-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <button class="theme-toggle w-12 h-12 p-0 rounded-full border border-cyan-400 bg-white/30 backdrop-blur shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-200" id="themeToggleMobile" aria-label="Toggle theme">
+                        <svg class="icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="icon moon-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                    <button id="mobileMenuBtn" class="md:hidden w-12 h-12 p-0 rounded-lg border border-cyan-400 bg-white/30 backdrop-blur shadow-sm flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-200">
+                        <img src="assets/img/menu.svg" alt="Menu" class="w-7 h-7 text-cyan-600">
+                    </button>
+                </div>
+                <div class="flex items-center space-x-6 nav-desktop md:flex hidden" id="navDesktop">
+                    <a href="#home" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.home">Trang chủ</a>
+                    <a href="#about" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.about">Giới thiệu</a>
+                    <a href="#timeline" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.timeline">Kinh nghiệm</a>
+                    <a href="#projects" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.projects">Dự án</a>
+                    <a href="#contact" class="nav-link ripple text-white hover:text-blue-300 transition-all duration-300 font-rajdhani font-medium hover:neon-glow px-3 py-2 rounded-lg text-center" data-i18n="nav.contact">Liên hệ</a>
+                    <!-- Language Dropdown -->
+                    <div class="language-dropdown" id="languageDropdown">
+                        <button class="language-dropdown-toggle rounded-full" id="languageDropdownToggle" aria-label="Select language">
+                            <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon current-flag" id="currentFlag">
+                        </button>
+                        <div class="language-dropdown-menu" id="languageDropdownMenu">
+                            <button class="language-option" data-lang="vn" data-flag="https://flagcdn.com/w80/vn.png">
+                                <img src="https://flagcdn.com/w80/vn.png" alt="Vietnamese" class="flag-icon">
+                            </button>
+                            <button class="language-option" data-lang="en" data-flag="https://flagcdn.com/w80/gb.png">
+                                <img src="https://flagcdn.com/w80/gb.png" alt="English" class="flag-icon">
+                            </button>
+                            <button class="language-option" data-lang="jp" data-flag="https://flagcdn.com/w80/jp.png">
+                                <img src="https://flagcdn.com/w80/jp.png" alt="Japanese" class="flag-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Theme Toggle Button -->
+                    <button class="theme-toggle rounded-full" id="themeToggle" aria-label="Toggle theme">
+                        <svg class="icon sun-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg class="icon moon-icon" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Mobile nav (ẩn mặc định, hiện khi bấm hamburger) đặt ngoài header để không bị giới hạn chiều cao -->
+    <div id="navMobile" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex flex-col items-center justify-center space-y-8 md:hidden hidden">
+        <a href="#home" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.home">Trang chủ</a>
+        <a href="#about" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.about">Giới thiệu</a>
+        <a href="#timeline" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.timeline">Kinh nghiệm</a>
+        <a href="#projects" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.projects">Dự án</a>
+        <a href="#contact" class="nav-link text-white text-2xl font-rajdhani" data-i18n="nav.contact">Liên hệ</a>
+        <button id="closeMobileMenu" class="mt-8 text-white text-lg px-6 py-2 rounded bg-cyan-500 hover:bg-cyan-600">Đóng</button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section -->
+        <section id="home" class="text-center py-20 relative">
+            <div class="glass rounded-3xl p-12 max-w-4xl mx-auto relative overflow-hidden">
+                <h2 class="text-5xl font-bold text-white mb-6 font-orbitron glow-text" data-i18n="hero.title">Chào mừng đến với Portfolio của tôi</h2>
+                <p class="text-xl text-blue-100 mb-10 font-exo leading-relaxed" data-i18n="hero.subtitle">Tôi là một nhà phát triển web đam mê sáng tạo</p>
+                
+                <!-- Floating Lottie Animation -->
+                <div class="absolute -bottom-5 right-0 w-48 h-48 opacity-60 float">
+                    <lottie-player
+                        src="assets/lottiefiles/Home1.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                    ></lottie-player>
+                </div>
+                
+                <div class="absolute -bottom-5 left-0 w-48 h-48 opacity-60 float" style="animation-delay: 2s;">
+                    <lottie-player
+                        src="assets/lottiefiles/Home2.json"
+                        background="transparent"
+                        speed="1"
+                        style="width: 100%; height: 100%"
+                        loop
+                        autoplay
+                    ></lottie-player>
+                </div>
+
+                <!-- Animated Button with Neumorphism -->
+                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow ripple" onclick="scrollToProjects()">
+                    <span class="flex items-center space-x-2">
+                        <span class="text-lg" data-i18n="hero.cta">Xem dự án của tôi</span>
+                        <div class="w-14 h-15">
+                            <lottie-player 
+                                src="assets/lottiefiles/OpenProject.json" 
+                                background="transparent" 
+                                speed="1" 
+                                style="width: 100%; height: 100%;" 
+                                loop 
+                                autoplay>
+                            </lottie-player>
+                        </div>
+                    </span>
+                </button>
+            </div>
+            
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider style-1">
+            <div class="particle">⚛️</div>
+            <div class="particle">⚡</div>
+            <div class="particle">🔧</div>
+            <div class="particle">💻</div>
+        </div>
+
+        <!-- About Section -->
+        <section id="about" class="py-16">
+            <h3 class="text-4xl font-bold text-white mb-12 text-center font-orbitron glow-text" data-i18n="about.title">Về tôi</h3>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="glass rounded-3xl p-8">
+                    <p class="text-blue-100 leading-relaxed text-lg font-exo" data-i18n="about.description">
+                        Tôi là một nhà phát triển web với kinh nghiệm trong việc xây dựng các ứng dụng web hiện đại. 
+                        Tôi đam mê tạo ra những trải nghiệm người dùng tuyệt vời và luôn tìm hiểu những công nghệ mới.
+                    </p>
+                    
+                    <!-- Skills with Neumorphism -->
+                    <div id="skillsContainer"></div>
+                </div>
+                
+                <div class="glass rounded-3xl p-8 flex items-center justify-center relative overflow-hidden">
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-6 rounded-full gradient-bg flex items-center justify-center neon-glow">
+                            <div class="w-40 h-40 rounded-full bg-white flex items-center justify-center overflow-hidden">
+                                <img src="assets/img/avatar.png" alt="Avatar" class="w-full h-full object-cover rounded-full" />
+                            </div>
+                        </div>
+                        <!-- Thông tin cá nhân -->
+                        <div id="aboutInfoBox" class="flex flex-col justify-between h-full text-left font-rajdhani text-blue-200 text-lg font-semibold mb-4"></div>
+                        
+                        <!-- Floating Icons -->
+                        <div class="absolute top-4 right-4 w-24 h-24 opacity-60 float">
+                            <lottie-player
+                                src="assets/lottiefiles/Infomation.json"
+                                background="transparent"
+                                speed="1"
+                                style="width: 100%; height: 100%"
+                                loop
+                                autoplay
+                            ></lottie-player>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider style-2">
+            <div class="particle">📅</div>
+            <div class="particle">🎯</div>
+            <div class="particle">📈</div>
+            <div class="particle">🏆</div>
+        </div>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="py-16">
+            <h3 class="text-4xl font-bold text-white mb-12 text-center font-orbitron glow-text" data-i18n="timeline.title">Kinh nghiệm làm việc</h3>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full gradient-bg rounded-full hidden md:block"></div>
+                
+                <!-- Timeline Items -->
+                <div class="space-y-12" id="timelineContainer">
+                    <!-- Timeline item is rendered by renderExperiences.js -->
+                    
+                </div>
+                
+                <!-- Expand Button -->
+                <div class="text-center mt-12" id="timelineBtnContainer">
+                    <button id="expandTimelineBtn" onclick="window.interactions.expandTimeline()" class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow">
+                        <span class="flex items-center space-x-2">
+                            <span id="expandBtnText">Xem thêm kinh nghiệm</span>
+                            <svg id="expandBtnIcon" class="w-6 h-6 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider style-3">
+            <div class="particle">🎨</div>
+            <div class="particle">💡</div>
+            <div class="particle">🔮</div>
+            <div class="particle">⭐</div>
+        </div>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <h3 class="text-4xl font-bold text-white mb-12 text-center font-orbitron glow-text" data-i18n="projects.title">Dự án của tôi</h3>
+            
+            <!-- Projects Grid with Horizontal Scroll -->
+            <div class="projects-container relative">
+                <div class="projects-scroll flex gap-6 overflow-x-auto pb-6 scrollbar-hide" id="projectsScroll">
+                    <!-- Projects are rendered by renderProjects.js -->
+                </div>
+                
+                <!-- Scroll Indicators -->
+                <div class="flex justify-center mt-6 space-x-2" id="scrollIndicators">
+                    <!-- Indicators will be dynamically generated by renderProjects.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Divider -->
+        <div class="section-divider style-4">
+            <div class="particle">📧</div>
+            <div class="particle">📱</div>
+            <div class="particle">🌐</div>
+            <div class="particle">🤝</div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16">
+            <h3 class="text-4xl font-bold text-white mb-12 text-center font-orbitron glow-text" data-i18n="contact.title">Liên hệ</h3>
+            <div class="max-w-2xl mx-auto">
+                <div class="glass rounded-3xl p-8">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-blue-100 mb-3 font-rajdhani" data-i18n="contact.form.name">Họ tên</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 neumorphism-inset border-0 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 font-exo" data-i18n-placeholder="contact.form.name_placeholder" placeholder="Nhập họ tên của bạn">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-blue-100 mb-3 font-rajdhani" data-i18n="contact.form.email">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 neumorphism-inset border-0 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 font-exo" data-i18n-placeholder="contact.form.email_placeholder" placeholder="Nhập email của bạn">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-blue-100 mb-3 font-rajdhani" data-i18n="contact.form.message">Tin nhắn</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 neumorphism-inset border-0 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-800 font-exo resize-none" data-i18n-placeholder="contact.form.message_placeholder" placeholder="Nhập tin nhắn của bạn"></textarea>
+                        </div>
+                        <button type="button" onclick="showDevelopmentPopup()" class="w-full neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow">
+                            <span class="flex items-center justify-center space-x-2">
+                                <span class="text-lg" data-i18n="contact.form.submit">Gửi tin nhắn</span>
+                                <div class="w-12 h-12">
+                                    <lottie-player 
+                                        src="assets/lottiefiles/Send.json" 
+                                        background="transparent" 
+                                        speed="1" 
+                                        style="width: 100%; height: 100%;" 
+                                        loop 
+                                        autoplay>
+                                    </lottie-player>
+                                </div>
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-[9999] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="glass rounded-3xl max-w-4xl w-full max-h-[90vh] relative z-[10000] flex flex-col">
+            <!-- Fixed Header -->
+            <div class="flex justify-between items-start p-8 pb-4 border-b border-gray-700">
+                <h3 id="modalTitle" class="text-3xl font-bold text-white font-orbitron">Dự án</h3>
+                <button onclick="window.projects.closeProjectDetails()" class="text-white hover:text-blue-300 transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Scrollable Content -->
+            <div class="flex-1 overflow-y-auto p-8 pt-4">
+                <div id="modalContent" class="space-y-6">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+            
+            <!-- Fixed Footer with Action Buttons -->
+            <div class="flex justify-end gap-4 p-8 pt-4 border-t border-gray-700" id="modalFooter">
+                <!-- Action buttons will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Development Popup Modal -->
+    <div id="developmentPopup" class="fixed inset-0 bg-black bg-opacity-50 z-[9999] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="glass rounded-3xl max-w-md w-full relative z-[10000] flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-start p-6 pb-4 border-b border-gray-700">
+                <h3 class="text-2xl font-bold text-white font-orbitron" data-i18n="development.title">🚧 Chức năng đang phát triển</h3>
+                <button onclick="closeDevelopmentPopup()" class="text-white hover:text-blue-300 transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-6">
+                <div class="text-center mb-6">
+                    <div class="w-48 h-48 mx-auto mb-4">
+                        <lottie-player
+                            src="assets/lottiefiles/Development.json"
+                            background="transparent"
+                            speed="1"
+                            style="width: 100%; height: 100%"
+                            loop
+                            autoplay
+                        ></lottie-player>
+                    </div>
+                    <p class="text-blue-100 font-exo text-lg mb-4" data-i18n="development.message">Chức năng gửi tin nhắn đang được phát triển và sẽ sớm ra mắt!</p>
+                    <p class="text-blue-200 font-exo text-sm" data-i18n="development.submessage">Cảm ơn bạn đã quan tâm đến portfolio của tôi.</p>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <div class="flex justify-center p-6 pt-4 border-t border-gray-700">
+                <button onclick="closeDevelopmentPopup()" class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold py-2 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow" data-i18n="development.close">
+                    Đóng
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-dark py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-blue-100 font-rajdhani" data-i18n="footer.copyright">&copy; 2025 Tai Tran. Tất cả quyền được bảo lưu.</p>
+            
+            <!-- Social Links with Floating Icons -->
+            <div class="flex justify-center space-x-8 mt-6">
+                <a href="https://facebook.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: linear-gradient(135deg, #1877f2 60%, #3b5998 100%);">
+                    <svg viewBox="0 0 24 24" fill="#1877F2" width="70%" height="70%">
+                        <g transform="translate(2.5, 0)">
+                            <path d="M13 3h-3c-1.66 0-3 1.34-3 3v3H5c-.55 0-1 .45-1 1v2c0 .55.45 1 1 1h2v8c0 .55.45 1 1 1h2c.55 0 1-.45 1-1v-8h2.29c.45 0 .83-.3.95-.73l.5-2A1 1 0 0014.8 10H11V7c0-.55.45-1 1-1h1c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1z" fill="white"/>
+                        </g>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow-green cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);">
+                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                        <circle cx="17" cy="7" r="2" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow-purple cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: linear-gradient(135deg, #0077b5 60%, #0e76a8 100%);">
+                    <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="50%" height="50%">
+                        <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.09 107 0 82.94 0 53.62A53.59 53.59 0 0153.66 0c29.5 0 53.17 24.09 53.17 53.62 0 29.33-23.67 53.38-53 53.38zM447.9 448h-92.4V302.4c0-34.7-12.4-58.4-43.3-58.4-23.6 0-37.6 15.9-43.7 31.3-2.3 5.5-2.8 13.2-2.8 20.9V448h-92.4s1.2-251.1 0-277h92.4v39.3c-.2.3-.5.7-.7 1h.7v-1c12.3-19 34.3-46.2 83.5-46.2 60.9 0 106.6 39.7 106.6 125.2V448z" fill="white"/>
+                    </svg>                          
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow-orange cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: linear-gradient(135deg, #333 60%, #24292e 100%);">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="50%" height="50%">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+[
+  {
+    "period": "2023 - Present",
+    "title": "Senior Frontend Developer",
+    "company": "Tech Company ABC",
+    "description": "Developing web applications with React, Vue.js",
+    "responsibilities": [
+      "Lead a team of 5 developers and ensure code quality",
+      "Develop modern web applications using React, Vue.js",
+      "Optimize performance and user experience",
+      "Mentor junior developers and conduct code reviews"
+    ],
+    "technologies": ["React", "Vue.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "period": "2021 - 2023",
+    "title": "Full Stack Developer",
+    "company": "Startup XYZ",
+    "description": "Building full-stack web applications",
+    "responsibilities": [
+      "Build web applications from scratch",
+      "Develop RESTful APIs and database design",
+      "Work in a dynamic startup environment",
+      "Learn and apply new technologies"
+    ],
+    "technologies": ["Node.js", "MongoDB", "Express", "React"]
+  },
+  {
+    "period": "2019 - 2021",
+    "title": "Junior Developer",
+    "company": "Digital Agency DEF",
+    "description": "Started career with website development",
+    "responsibilities": [
+      "Develop websites for clients",
+      "Learn basic skills in HTML, CSS, JavaScript",
+      "Work in a small team and learn from senior developers",
+      "Participate in real projects"
+    ],
+    "technologies": ["HTML/CSS", "JavaScript", "PHP", "WordPress"]
+  },
+  {
+    "period": "2017 - 2019",
+    "title": "Freelance Developer",
+    "company": "Self-employed",
+    "description": "Freelancing and learning new technologies",
+    "responsibilities": [
+      "Take on small freelance projects",
+      "Self-study and research new technologies",
+      "Build personal portfolio",
+      "Join developer communities"
+    ],
+    "technologies": ["HTML/CSS", "JavaScript", "jQuery", "Bootstrap"]
+  },
+  {
+    "period": "2015 - 2017",
+    "title": "Student Developer",
+    "company": "University Projects",
+    "description": "Learning and practicing in university environment",
+    "responsibilities": [
+      "Study programming courses",
+      "Participate in real projects at school",
+      "Join hackathons and coding competitions",
+      "Build a foundation in computer science"
+    ],
+    "technologies": ["Java", "C++", "Python"]
+  }
+] 

@@ -1,0 +1,67 @@
+[
+  {
+    "period": "2023 - Nay",
+    "title": "Senior Frontend Developer",
+    "company": "Tech Company ABC",
+    "description": "Phát triển ứng dụng web với React, Vue.js",
+    "responsibilities": [
+      "Dẫn dắt nhóm 5 lập trình viên, đảm bảo chất lượng code",
+      "Phát triển các ứng dụng web hiện đại sử dụng React, Vue.js",
+      "Tối ưu hiệu năng và trải nghiệm người dùng",
+      "Hướng dẫn, review code cho các lập trình viên junior"
+    ],
+    "technologies": ["React", "Vue.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "period": "2021 - 2023",
+    "title": "Full Stack Developer",
+    "company": "Startup XYZ",
+    "description": "Xây dựng ứng dụng web full-stack",
+    "responsibilities": [
+      "Xây dựng ứng dụng web từ đầu",
+      "Thiết kế database và phát triển RESTful API",
+      "Làm việc trong môi trường startup năng động",
+      "Tìm hiểu và áp dụng công nghệ mới"
+    ],
+    "technologies": ["Node.js", "MongoDB", "Express", "React"]
+  },
+  {
+    "period": "2019 - 2021",
+    "title": "Junior Developer",
+    "company": "Digital Agency DEF",
+    "description": "Bắt đầu sự nghiệp với phát triển website",
+    "responsibilities": [
+      "Phát triển website cho khách hàng",
+      "Học các kỹ năng cơ bản về HTML, CSS, JavaScript",
+      "Làm việc nhóm nhỏ, học hỏi từ senior",
+      "Tham gia các dự án thực tế"
+    ],
+    "technologies": ["HTML/CSS", "JavaScript", "PHP", "WordPress"]
+  },
+  {
+    "period": "2017 - 2019",
+    "title": "Freelance Developer",
+    "company": "Làm việc tự do",
+    "description": "Làm freelance và học hỏi công nghệ mới",
+    "responsibilities": [
+      "Nhận các dự án freelance nhỏ",
+      "Tự học, nghiên cứu công nghệ mới",
+      "Xây dựng portfolio cá nhân",
+      "Tham gia cộng đồng lập trình viên"
+    ],
+    "technologies": ["HTML/CSS", "JavaScript", "jQuery", "Bootstrap"]
+  },
+  {
+    "period": "2015 - 2017",
+    "title": "Sinh viên lập trình",
+    "company": "Dự án trường đại học",
+    "description": "Học tập và thực hành trong môi trường đại học",
+    "responsibilities": [
+      "Học các môn lập trình",
+      "Tham gia dự án thực tế tại trường",
+      "Tham gia hackathon, cuộc thi lập trình",
+      "Xây dựng nền tảng kiến thức khoa học máy tính"
+    ],
+    "technologies": ["Java", "C++", "Python"]
+  }
+] 

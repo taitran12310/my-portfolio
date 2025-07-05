@@ -1,0 +1,67 @@
+[
+  {
+    "period": "2023年 - 現在",
+    "title": "シニアフロントエンド開発者",
+    "company": "Tech Company ABC",
+    "description": "React、Vue.jsを用いたWebアプリケーション開発",
+    "responsibilities": [
+      "5人の開発チームをリードし、コード品質を確保",
+      "React、Vue.jsを使った最新Webアプリの開発",
+      "パフォーマンスとユーザー体験の最適化",
+      "ジュニア開発者の指導とコードレビュー"
+    ],
+    "technologies": ["React", "Vue.js", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "period": "2021年 - 2023年",
+    "title": "フルスタック開発者",
+    "company": "スタートアップXYZ",
+    "description": "フルスタックWebアプリケーションの構築",
+    "responsibilities": [
+      "Webアプリをゼロから構築",
+      "RESTful APIとデータベース設計の開発",
+      "ダイナミックなスタートアップ環境での業務",
+      "新技術の習得と応用"
+    ],
+    "technologies": ["Node.js", "MongoDB", "Express", "React"]
+  },
+  {
+    "period": "2019年 - 2021年",
+    "title": "ジュニア開発者",
+    "company": "デジタルエージェンシーDEF",
+    "description": "Webサイト開発でキャリアをスタート",
+    "responsibilities": [
+      "クライアント向けWebサイトの開発",
+      "HTML、CSS、JavaScriptの基礎スキル習得",
+      "小規模チームでの業務とシニアからの学び",
+      "実プロジェクトへの参加"
+    ],
+    "technologies": ["HTML/CSS", "JavaScript", "PHP", "WordPress"]
+  },
+  {
+    "period": "2017年 - 2019年",
+    "title": "フリーランス開発者",
+    "company": "自営業",
+    "description": "フリーランスとして活動し新技術を学ぶ",
+    "responsibilities": [
+      "小規模なフリーランス案件の受注",
+      "新技術の独学・調査",
+      "ポートフォリオサイトの構築",
+      "開発者コミュニティへの参加"
+    ],
+    "technologies": ["HTML/CSS", "JavaScript", "jQuery", "Bootstrap"]
+  },
+  {
+    "period": "2015年 - 2017年",
+    "title": "学生開発者",
+    "company": "大学プロジェクト",
+    "description": "大学環境での学習と実践",
+    "responsibilities": [
+      "プログラミング科目の履修",
+      "学内実プロジェクトへの参加",
+      "ハッカソンやコーディング大会への参加",
+      "コンピュータサイエンスの基礎構築"
+    ],
+    "technologies": ["Java", "C++", "Python"]
+  }
+] 
