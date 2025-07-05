@@ -349,11 +349,15 @@ header.sticky {
 }
 
 .neon-glow-green {
-    box-shadow: 0 0 20px var(--neon-glow-secondary), 0 0 40px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 25px rgba(225, 48, 108, 0.6), 0 0 50px rgba(225, 48, 108, 0.4), 0 0 75px rgba(225, 48, 108, 0.2);
 }
 
 .neon-glow-purple {
     box-shadow: 0 0 20px var(--neon-glow-accent), 0 0 40px rgba(147, 51, 234, 0.3);
+}
+
+.neon-glow-orange {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 165, 0, 0.3);
 }
 
 [data-theme="dark"] .neon-glow {
@@ -361,11 +365,15 @@ header.sticky {
 }
 
 [data-theme="dark"] .neon-glow-green {
-    box-shadow: 0 0 20px var(--neon-glow-secondary), 0 0 40px rgba(36, 71, 71, 0.3);
+    box-shadow: 0 0 25px rgba(225, 48, 108, 0.7), 0 0 50px rgba(225, 48, 108, 0.5), 0 0 75px rgba(225, 48, 108, 0.3);
 }
 
 [data-theme="dark"] .neon-glow-purple {
     box-shadow: 0 0 20px var(--neon-glow-accent), 0 0 40px rgba(148, 199, 199, 0.3);
+}
+
+[data-theme="dark"] .neon-glow-orange {
+    box-shadow: 0 0 20px rgba(255, 165, 0, 0.6), 0 0 40px rgba(255, 165, 0, 0.4);
 }
 
 /* Gradient Backgrounds */
@@ -735,7 +743,8 @@ button:hover,
     
     .neon-glow,
     .neon-glow-green,
-    .neon-glow-purple {
+    .neon-glow-purple,
+    .neon-glow-orange {
         box-shadow: none !important;
     }
     

@@ -136,22 +136,6 @@
                 <h2 class="text-5xl font-bold text-white mb-6 font-orbitron glow-text" data-i18n="hero.title">Chào mừng đến với Portfolio của tôi</h2>
                 <p class="text-xl text-blue-100 mb-10 font-exo leading-relaxed" data-i18n="hero.subtitle">Tôi là một nhà phát triển web đam mê sáng tạo</p>
                 
-                <!-- Animated Button with Neumorphism -->
-                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow ripple" onclick="scrollToProjects()">
-                    <span class="flex items-center space-x-2">
-                        <span data-i18n="hero.cta">Xem dự án của tôi</span>
-                        <div class="w-14 h-15">
-                            <lottie-player 
-                                src="/assets/lottiefiles/OpenProject.json" 
-                                background="transparent" 
-                                speed="1" 
-                                style="width: 100%; height: 100%;" 
-                                loop 
-                                autoplay>
-                            </lottie-player>
-                        </div>
-                    </span>
-                </button>
 
                 <!-- Floating Lottie Animation -->
                 <div class="absolute -bottom-5 right-0 w-48 h-48 opacity-60 float">
@@ -175,6 +159,23 @@
                         autoplay
                     ></lottie-player>
                 </div>
+
+                <!-- Animated Button with Neumorphism -->
+                <button class="neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold px-8 py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 neon-glow ripple" onclick="scrollToProjects()">
+                    <span class="flex items-center space-x-2">
+                        <span class="text-lg" data-i18n="hero.cta">Xem dự án của tôi</span>
+                        <div class="w-14 h-15">
+                            <lottie-player 
+                                src="/assets/lottiefiles/OpenProject.json" 
+                                background="transparent" 
+                                speed="1" 
+                                style="width: 100%; height: 100%;" 
+                                loop 
+                                autoplay>
+                            </lottie-player>
+                        </div>
+                    </span>
+                </button>
             </div>
             
         </section>
@@ -320,7 +321,7 @@
                         </div>
                         <button type="button" onclick="showDevelopmentPopup()" class="w-full neumorphism hover:neumorphism-inset text-gray-800 font-rajdhani font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow">
                             <span class="flex items-center justify-center space-x-2">
-                                <span data-i18n="contact.form.submit">Gửi tin nhắn</span>
+                                <span class="text-lg" data-i18n="contact.form.submit">Gửi tin nhắn</span>
                                 <div class="w-12 h-12">
                                     <lottie-player 
                                         src="assets/lottiefiles/Send.json" 
@@ -431,6 +432,11 @@
                     <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="50%" height="50%">
                         <path d="M100.28 448H7.4V148.9h92.88zm-46.44-341C24.09 107 0 82.94 0 53.62A53.59 53.59 0 0153.66 0c29.5 0 53.17 24.09 53.17 53.62 0 29.33-23.67 53.38-53 53.38zM447.9 448h-92.4V302.4c0-34.7-12.4-58.4-43.3-58.4-23.6 0-37.6 15.9-43.7 31.3-2.3 5.5-2.8 13.2-2.8 20.9V448h-92.4s1.2-251.1 0-277h92.4v39.3c-.2.3-.5.7-.7 1h.7v-1c12.3-19 34.3-46.2 83.5-46.2 60.9 0 106.6 39.7 106.6 125.2V448z" fill="white"/>
                     </svg>                          
+                </a>
+                <a href="https://github.com/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full flex items-center justify-center neon-glow-orange cursor-pointer transform hover:scale-110 transition-all duration-300" style="background: linear-gradient(135deg, #333 60%, #24292e 100%);">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="50%" height="50%">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="white"/>
+                    </svg>
                 </a>
             </div>
         </div>
