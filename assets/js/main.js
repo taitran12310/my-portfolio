@@ -16,12 +16,16 @@ let currentLanguage = 'vn';
 
 // Theme System
 let currentTheme = 'light';
+const isUseMock = false;
+const getDataDir = () => {
+    return `assets/data/${isUseMock ? "mockup" : "personal"}/`;
+}
 
 
 // Function to load language data from JSON file
 async function loadLanguageData(lang) {
     try {
-        const response = await fetch(`lang/${lang}.json`);
+        const response = await fetch(`${getDataDir()}${lang}.json`);
         if (!response.ok) {
             throw new Error(`Failed to load language file: ${lang}.json`);
         }
@@ -436,7 +440,8 @@ window.interactions = {
     toggleSkill,
     toggleTimeline,
     expandTimeline,
-    scrollToProjects
+    scrollToProjects,
+    getDataDir
 };
 
 // Function to toggle skill expansion

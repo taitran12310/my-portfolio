@@ -151,7 +151,7 @@ function handleExpandTimeline() {
 document.addEventListener('DOMContentLoaded', function() {
     function fetchAndRenderExperiences() {
         const lang = window.i18n.getPreferredLanguage();
-        const file = `assets/js/data/experiences_${lang}.json`;
+        const file = `${window.interactions.getDataDir()}experiences_${lang}.json`;
         fetch(file)
             .then(response => response.json())
             .then(data => {

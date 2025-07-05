@@ -19,21 +19,21 @@
     },
     "about": {
         "title": "私について",
-        "description": "私は現代的なウェブアプリケーションの構築に経験を持つウェブ開発者です。素晴らしいユーザー体験を作り出すことに情熱を持ち、常に新しい技術を学んでいます。",
+        "description": "私は、Webアプリケーションとモバイルアプリケーションの両方の開発経験を持つ開発者です。優れたユーザー体験を提供することに情熱を持ち、常に新しい技術を学び、探求し続けています。",
         "avatar": "プロフィール画像",
         "info": {
             "name_label": "氏名",
             "name": "チャン　トゥアン　タイ",
             "birth_label": "生年",
-            "birth": "1996",
+            "birth": "****",
             "address_label": "出身地",
             "address": "ドン　ナイ",
             "gender_label": "性別",
             "gender": "男性",
             "email_label": "メール",
-            "email": "taitran12310@gmail.com",
+            "email": "taitran*****@gmail.com",
             "phone_label": "電話番号",
-            "phone": "+84 123 456 789"
+            "phone": "+84 975 *** 310"
         }
     },
     "timeline": {

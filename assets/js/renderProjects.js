@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     function fetchAndRenderProjects() {
         const lang = window.i18n.getPreferredLanguage();
-        const file = `assets/js/data/projects_${lang}.json`;
+        const file = `${window.interactions.getDataDir()}projects_${lang}.json`;
         fetch(file)
             .then(response => response.json())
             .then(projects => {
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function showProjectDetails(projectId) {
     const lang = window.i18n.getPreferredLanguage();
-    const file = `assets/js/data/projects_${lang}.json`;
+    const file = `${window.interactions.getDataDir()}projects_${lang}.json`;
     fetch(file)
         .then(response => response.json())
         .then(projects => {
