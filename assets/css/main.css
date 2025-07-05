@@ -1857,7 +1857,7 @@ body.modal-open #projectModal * {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(59, 130, 246, 0.3), rgba(16, 185, 129, 0.3));
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(16, 185, 129, 0.2));
 }
 
 /* Responsive adjustments */

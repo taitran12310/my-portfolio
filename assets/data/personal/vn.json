@@ -44,7 +44,7 @@
         "tech": "Công nghệ sử dụng:",
         "expand_more": "Xem thêm {count} kinh nghiệm"
     },
-    "projects": {
+    "project": {
         "title": "Dự án của tôi",
         "desc": "Mô tả",
         "tech": "Công nghệ sử dụng",

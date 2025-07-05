@@ -44,9 +44,6 @@
         "tech": "使用技術:",
         "expand_more": "さらに{count}件の経験を見る"
     },
-    "projects": {
-        "title": "私のプロジェクト"
-    },
     "contact": {
         "title": "お問い合わせ",
         "form": {
@@ -69,6 +66,7 @@
         "close": "閉じる"
     },
     "project": {
+        "title": "私のプロジェクト",
         "desc": "説明",
         "tech": "使用技術",
         "features": "主な機能",

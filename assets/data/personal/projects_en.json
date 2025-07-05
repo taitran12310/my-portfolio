@@ -1,62 +1,31 @@
 [
   {
-    "title": "E-commerce Platform",
-    "description": "Modern e-commerce platform with full features",
-    "longDescription": "E-commerce Platform is a complete e-commerce system developed with modern technology. The application includes main features such as product management, cart, payment, order management, and admin dashboard.",
+    "title": "Logistic",
+    "description": "Participated in backend development project for Japanese logistics client",
+    "longDescription": "The Logistic Platform project is a large system consisting of multiple components (Frontend, Backend, Cloud, etc.). Collaborated with the Japanese team to handle backend processing.",
     "features": [
-      "Responsive and user-friendly UI",
-      "Secure registration/login system",
-      "Product management with images and detailed descriptions",
-      "Cart and online payment",
-      "Order management and status tracking",
-      "Review and comment system",
-      "Admin dashboard with detailed statistics"
+      "Synchronize data between component systems.",
+      "Process data by batch for parts:",
+      " + Create order information.",
+      " + Shipping history.",
+      " + Orders requesting delivery date/time, redelivery",
+      " + ..."
     ],
     "challenges": [
-      "Performance optimization with large data",
-      "Payment information security",
-      "Handling multiple orders concurrently",
-      "Integrating multiple payment gateways"
+      "Optimize performance with large data volumes",
+      "The system is very large but the corresponding part is only a small part, so we need to consider the level of impact",
+      "The system uses a self-built Framework, so understanding the Framework requires a long time",
+      "The system includes many teams working simultaneously, so deadlines are quite strict."
     ],
     "solutions": [
-      "Use Redis for data caching",
-      "SSL/TLS encryption for payment",
-      "Queue system for order processing",
-      "API gateway for payment integration"
+      "Add performance check steps to identify bottlenecks, then improve performance.",
+      "During the work process, we must always communicate with people in the team and communicate with parties to limit the level of impact."
     ],
-    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["React", "Node.js", "MongoDB"],
-    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
-  },
-  {
-    "title": "Task Management App",
-    "description": "Task management application with beautiful UI",
-    "longDescription": "Task Management App is a web application that helps manage tasks and projects efficiently. The app supports teamwork, progress tracking, and deadline management.",
-    "features": [
-      "Create and manage tasks with deadlines",
-      "Assign tasks to team members",
-      "Track progress with Kanban board",
-      "Real-time notifications",
-      "Reports and statistics",
-      "Calendar integration"
-    ],
-    "challenges": [
-      "Real-time data synchronization",
-      "Access control management",
-      "UX optimization for mobile"
-    ],
-    "solutions": [
-      "Firebase Realtime Database",
-      "Role-based access control",
-      "Progressive Web App (PWA)"
-    ],
-    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["Vue.js", "Firebase", "Tailwind"],
-    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "image": "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "demoUrl": null,
+    "githubUrl": null,
+    "tags": ["Java", "Shell Bash", "PostgreSQL"],
+    "lottie": "assets/lottiefiles/Logistic.json"
   },
   {
     "title": "Portfolio Website",
@@ -84,61 +53,6 @@
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
-    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
-  },
-  {
-    "title": "Weather App",
-    "description": "Weather application with real-time API",
-    "longDescription": "Weather App provides real-time weather information with accurate forecasts. The app has a beautiful and easy-to-use interface.",
-    "features": [
-      "Real-time weather",
-      "7-day forecast",
-      "Automatic location detection",
-      "Weather notifications",
-      "Home screen widget"
-    ],
-    "challenges": [
-      "API call optimization",
-      "Handling location permissions",
-      "Offline functionality"
-    ],
-    "solutions": [
-      "Caching with AsyncStorage",
-      "Request location permission",
-      "Service worker for offline"
-    ],
-    "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["React Native", "Expo", "OpenWeather API"],
-    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
-  },
-  {
-    "title": "Chat Application",
-    "description": "Real-time chat application with WebSocket",
-    "longDescription": "Chat Application is a real-time chat app with group creation, file sharing, and video calling. The app uses WebSocket for fast message delivery.",
-    "features": [
-      "Real-time chat",
-      "Create chat groups",
-      "File and image sharing",
-      "Video calling",
-      "Emoji and reactions",
-      "Message search"
-    ],
-    "challenges": [
-      "Handling WebSocket connections",
-      "File upload and storage",
-      "Video call quality"
-    ],
-    "solutions": [
-      "Connection pooling",
-      "Cloud storage (AWS S3)",
-      "WebRTC optimization"
-    ],
-    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["Socket.io", "Express.js", "MongoDB"],
-    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "assets/lottiefiles/Home2.json"
   }
 ] 

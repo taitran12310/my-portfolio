@@ -41,6 +41,9 @@ function getTechColor(tech) {
         'Java': 'text-yellow-600',
         'C++': 'text-blue-600',
         'Python': 'text-green-600',
+        'Shell Bash': 'text-green-500',
+        'PostgreSQL': 'text-blue-500',
+        'Utility': 'text-orange-500',
     };
     return tagColors[tech] || '';
 }
@@ -80,12 +83,25 @@ function closeDevelopmentPopup() {
     }
 }
 
+// Hàm lấy gradient cho project cards
+function getProjectGradient(index) {
+    const gradients = [
+        'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', // Purple to Blue
+        'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)', // Pink to Red
+        'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)', // Blue to Cyan
+        'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)', // Green to Cyan
+        'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'  // Pink to Yellow
+    ];
+    return gradients[index % gradients.length];
+}
+
 // Xuất ra window để file khác dùng
 window.common = {
     getLangText,
     getTechColor,
     getNestedValue,
-    getAboutInfo
+    getAboutInfo,
+    getProjectGradient
 };
 
 // Development popup functions

@@ -44,9 +44,6 @@
         "tech": "Technologies Used:",
         "expand_more": "Show {count} more experience"
     },
-    "projects": {
-        "title": "My Projects"
-    },
     "contact": {
         "title": "Contact",
         "form": {
@@ -69,6 +66,7 @@
         "close": "Close"
     },
     "project": {
+        "title": "My Projects",
         "desc": "Description",
         "tech": "Technologies Used",
         "features": "Key Features",

@@ -9,10 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (!container) return;
                 container.innerHTML = '';
                 projects.forEach((project, idx) => {
+                    // Lấy gradient từ common
+                    const gradientStyle = window.common.getProjectGradient(idx);
+                    
                     container.innerHTML += `
                     <div class="project-card glass rounded-3xl overflow-hidden transform hover:scale-105 transition-all duration-300 neon-glow min-w-[350px] md:min-w-[400px] cursor-pointer" data-project-idx="${idx}">
-                        <div class="gradient-bg h-48 flex items-center justify-center relative">
-                            <div class="w-16 h-16 opacity-60 float">
+                        <div class="h-48 flex items-center justify-center relative" style="background: ${gradientStyle};">
+                            <div class="w-48 h-48 opacity-100 float">
                                 <lottie-player 
                                     src="${project.lottie}" 
                                     background="transparent" 
@@ -22,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                     autoplay>
                                 </lottie-player>
                             </div>
-                            <span class="text-white font-rajdhani font-medium">${project.title}</span>
                         </div>
                         <div class="p-6">
                             <h4 class="text-xl font-semibold mb-3 text-white font-orbitron">${project.title}</h4>
@@ -41,6 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         showProjectDetails('project'+(parseInt(idx)+1));
                     };
                 });
+                
+                // Tạo scroll indicators động dựa trên số lượng projects
+                createScrollIndicators(projects.length);
             });
     }
     fetchAndRenderProjects();
@@ -50,19 +55,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const scrollContainer = document.getElementById('projectsScroll');
-    const indicators = document.querySelectorAll('.scroll-indicator');
     
-    if (scrollContainer && indicators.length > 0) {
-        // Set first indicator as active
-        indicators[0].classList.add('active');
+    if (scrollContainer) {
         // Update indicators on scroll
         scrollContainer.addEventListener('scroll', function() {
-            const scrollLeft = scrollContainer.scrollLeft;
-            const cardWidth = scrollContainer.querySelector('.project-card').offsetWidth + 24; // 24px gap
-            const currentIndex = Math.round(scrollLeft / cardWidth);
-            indicators.forEach((indicator, i) => {
-                indicator.classList.toggle('active', i === currentIndex);
-            });
+            const indicators = document.querySelectorAll('.scroll-indicator');
+            if (indicators.length > 0) {
+                const scrollLeft = scrollContainer.scrollLeft;
+                const cardWidth = scrollContainer.querySelector('.project-card')?.offsetWidth + 24 || 400; // 24px gap
+                const currentIndex = Math.round(scrollLeft / cardWidth);
+                indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === currentIndex);
+                });
+            }
         });
     }
     // Close modal when clicking outside
@@ -118,14 +123,18 @@ function showProjectDetails(projectId) {
                             ).join('')}
                         </div>
                     </div>
-                    ${project.features.length ? `<div><h4 class=\"text-xl font-semibold text-white mb-3 font-orbitron\">${window.common.getLangText('project.features', 'Tính năng chính')}</h4><ul class=\"text-blue-100 space-y-2 font-exo\">${project.features.map(feature => `<li>• ${feature}</li>`).join('')}</ul></div>` : ''}
+                    ${project.features.length ? `<div><h4 class=\"text-xl font-semibold text-white mb-3 font-orbitron\">${window.common.getLangText('project.features', 'Tính năng chính')}</h4><ul class=\"text-blue-100 space-y-2 font-exo\">${project.features.map(feature => `<li>${feature}</li>`).join('')}</ul></div>` : ''}
                     ${(project.challenges.length && project.solutions.length) ? `<div><h4 class=\"text-xl font-semibold text-white mb-3 font-orbitron\">${window.common.getLangText('project.challenges_solutions', 'Thách thức & Giải pháp')}</h4><div class=\"grid md:grid-cols-2 gap-6\"><div><h5 class=\"text-lg font-semibold text-red-300 mb-2 font-rajdhani\">${window.common.getLangText('project.challenges', 'Thách thức')}</h5><ul class=\"text-blue-100 space-y-1 font-exo text-sm\">${project.challenges.map(challenge => `<li>• ${challenge}</li>`).join('')}</ul></div><div><h5 class=\"text-lg font-semibold text-green-300 mb-2 font-rajdhani\">${window.common.getLangText('project.solutions', 'Giải pháp')}</h5><ul class=\"text-blue-100 space-y-1 font-exo text-sm\">${project.solutions.map(solution => `<li>• ${solution}</li>`).join('')}</ul></div></div></div>` : ''}
                 </div>
             `;
-            modalFooter.innerHTML = `
-                <a href="${project.demoUrl || '#'}" class="project-btn hover:neumorphism-inset font-rajdhani font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow text-white">${window.common.getLangText('project.demo', 'Xem Demo')}</a>
-                <a href="${project.githubUrl || '#'}" class="project-btn hover:neumorphism-inset font-rajdhani font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow-green text-white">${window.common.getLangText('project.github', 'GitHub')}</a>
-            `;
+            // Tạo buttons chỉ khi URL tồn tại và khác '#'
+            const demoButton = project.demoUrl && project.demoUrl !== '#' ? 
+                `<a href="${project.demoUrl}" class="project-btn hover:neumorphism-inset font-rajdhani font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow text-white">${window.common.getLangText('project.demo', 'Xem Demo')}</a>` : '';
+            
+            const githubButton = project.githubUrl && project.githubUrl !== '#' ? 
+                `<a href="${project.githubUrl}" class="project-btn hover:neumorphism-inset font-rajdhani font-semibold px-6 py-3 rounded-xl transition-all duration-300 transform hover:scale-105 neon-glow-green text-white">${window.common.getLangText('project.github', 'GitHub')}</a>` : '';
+            
+            modalFooter.innerHTML = demoButton + githubButton;
             modal.classList.remove('hidden');
             modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -159,8 +168,32 @@ function scrollProjects(index) {
     }
 }
 
+// Function to create scroll indicators dynamically
+function createScrollIndicators(projectCount) {
+    const indicatorsContainer = document.getElementById('scrollIndicators');
+    if (!indicatorsContainer) return;
+    
+    // Clear existing indicators
+    indicatorsContainer.innerHTML = '';
+    
+    // Create indicators based on project count
+    for (let i = 0; i < projectCount; i++) {
+        const indicator = document.createElement('button');
+        indicator.className = 'scroll-indicator w-3 h-3 rounded-full bg-blue-400 opacity-50 transition-all duration-300';
+        indicator.onclick = () => window.interactions.scrollProjects(i);
+        indicatorsContainer.appendChild(indicator);
+    }
+    
+    // Set first indicator as active
+    const firstIndicator = indicatorsContainer.querySelector('.scroll-indicator');
+    if (firstIndicator) {
+        firstIndicator.classList.add('active');
+    }
+}
+
 window.projects = {
     showProjectDetails,
     closeProjectDetails,
-    scrollProjects
+    scrollProjects,
+    createScrollIndicators
 };

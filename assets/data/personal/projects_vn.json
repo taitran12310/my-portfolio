@@ -1,74 +1,43 @@
 [
   {
-    "title": "E-commerce Platform",
-    "description": "Nền tảng thương mại điện tử hiện đại với đầy đủ tính năng",
-    "longDescription": "Dự án E-commerce Platform là một hệ thống thương mại điện tử hoàn chỉnh được phát triển với công nghệ hiện đại. Ứng dụng bao gồm các tính năng chính như quản lý sản phẩm, giỏ hàng, thanh toán, quản lý đơn hàng và hệ thống quản trị admin.",
+    "title": "Logistic",
+    "description": "Tham gia dự án phát triển backend cho khách hàng logistic Nhật Bản",
+    "longDescription": "Dự án Logistic Platform là một hệ thống lớn bao gốm nhiều phần (Frontend, Backend, Cloud,...). Cùng tham gia với team Nhật Bản để đối ứng về các xử lý backend.",
     "features": [
-      "Giao diện người dùng responsive và thân thiện",
-      "Hệ thống đăng ký/đăng nhập bảo mật",
-      "Quản lý sản phẩm với hình ảnh và mô tả chi tiết",
-      "Giỏ hàng và thanh toán trực tuyến",
-      "Quản lý đơn hàng và theo dõi trạng thái",
-      "Hệ thống đánh giá và bình luận",
-      "Dashboard quản trị với thống kê chi tiết"
+      "・Đồng bộ data giữa các hệ thống thành phần.",
+      "・Xử lý data bằng batch cho các phần:",
+      "　+ Tạo thông tin đơn hàng.",
+      "　+ Lịch sử vận đơn.",
+      "　+ Các đơn yêu cầu ngày giờ giao hàng, giao lại hàng",
+      "　+ ..."
     ],
     "challenges": [
       "Tối ưu hóa hiệu suất với lượng dữ liệu lớn",
-      "Bảo mật thông tin thanh toán",
-      "Xử lý đồng thời nhiều đơn hàng",
-      "Tích hợp nhiều cổng thanh toán"
+      "Hệ thống rất lớn nhưng phần đối ứng chỉ là một phần nhỏ trong đó nên cần cân nhắc mức độ ảnh hưởng",
+      "Hệ thống sử dụng Framework tự build nên việc nắm rõ Framework cần thời gian dài",
+      "Hệ thống bao gồm nhiều team cùng làm đồng thời nên deadline khá khắt khe."
     ],
     "solutions": [
-      "Sử dụng Redis để cache dữ liệu",
-      "Mã hóa SSL/TLS cho thanh toán",
-      "Queue system để xử lý đơn hàng",
-      "API gateway để tích hợp thanh toán"
+      "Thêm các bước kiểm tra hiệu suất để xác định những điểm nghẽn, từ đó cải thiện hiệu suất.",
+      "Trong quá trình làm, phải luôn trao đổi với người trong team và trao đổi với các bên để hạn chế mức độ ảnh hưởng."
     ],
-    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["React", "Node.js", "MongoDB"],
-    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
-  },
-  {
-    "title": "Task Management App",
-    "description": "Ứng dụng quản lý công việc với giao diện đẹp mắt",
-    "longDescription": "Task Management App là một ứng dụng web giúp quản lý công việc và dự án một cách hiệu quả. Ứng dụng hỗ trợ làm việc nhóm, theo dõi tiến độ và quản lý deadline.",
-    "features": [
-      "Tạo và quản lý task với deadline",
-      "Phân công công việc cho team members",
-      "Theo dõi tiến độ với Kanban board",
-      "Thông báo real-time",
-      "Báo cáo và thống kê",
-      "Tích hợp calendar"
-    ],
-    "challenges": [
-      "Đồng bộ dữ liệu real-time",
-      "Quản lý quyền truy cập",
-      "Tối ưu UX cho mobile"
-    ],
-    "solutions": [
-      "Firebase Realtime Database",
-      "Role-based access control",
-      "Progressive Web App (PWA)"
-    ],
-    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["Vue.js", "Firebase", "Tailwind"],
-    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "image": "assets/img/logistic_detail.jpg",
+    "demoUrl": null,
+    "githubUrl": null,
+    "tags": ["Java", "Shell Bash", "PostgreSQL"],
+    "lottie": "assets/lottiefiles/Logistic.json"
   },
   {
     "title": "Portfolio Website",
     "description": "Website portfolio cá nhân với thiết kế hiện đại",
     "longDescription": "Portfolio Website được thiết kế với giao diện hiện đại, responsive và các hiệu ứng animation mượt mà. Website showcase các dự án, kỹ năng và kinh nghiệm làm việc.",
     "features": [
-      "Giao diện responsive đẹp mắt",
-      "Hiệu ứng animation mượt mà",
-      "Dark/Light theme",
-      "Đa ngôn ngữ (VN/EN/JP)",
-      "Timeline kinh nghiệm",
-      "Contact form"
+      "・Giao diện responsive đẹp mắt",
+      "・Hiệu ứng animation mượt mà",
+      "・Dark/Light theme",
+      "・Đa ngôn ngữ (VN/EN/JP)",
+      "・Timeline kinh nghiệm",
+      "・Contact form"
     ],
     "challenges": [
       "Tối ưu performance",
@@ -80,65 +49,40 @@
       "CSS fallbacks và polyfills",
       "Meta tags và structured data"
     ],
-    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    "image": "assets/img/portfolio_detail.jpg",
     "demoUrl": "#",
     "githubUrl": "#",
     "tags": ["HTML/CSS", "JavaScript", "Tailwind"],
-    "lottie": "https://assets5.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "lottie": "assets/lottiefiles/Home2.json"
   },
   {
-    "title": "Weather App",
-    "description": "Ứng dụng thời tiết với API real-time",
-    "longDescription": "Weather App cung cấp thông tin thời tiết real-time với dự báo chính xác. Ứng dụng có giao diện đẹp mắt và dễ sử dụng.",
+    "title": "My Tools",
+    "description": "Hệ thống tổng hợp các công cụ tiện ích cá nhân phục vụ cho công việc và học tập.",
+    "longDescription": "My Tools là một website tập hợp nhiều công cụ nhỏ như chuyển đổi định dạng, tạo mã QR, kiểm tra regex, tạo mật khẩu mạnh, chuyển đổi màu sắc, và nhiều tiện ích khác. Hệ thống được xây dựng với mục tiêu giúp người dùng tiết kiệm thời gian và nâng cao hiệu suất làm việc thông qua giao diện đơn giản, dễ sử dụng và hoàn toàn miễn phí.",
     "features": [
-      "Thời tiết real-time",
-      "Dự báo 7 ngày",
-      "Định vị tự động",
-      "Thông báo thời tiết",
-      "Widget cho home screen"
+      "・Tạo mã QR nhanh chóng",
+      "・Chuyển đổi định dạng văn bản (JSON, XML, CSV, ...)",
+      "・Kiểm tra và tạo Regex",
+      "・Tạo mật khẩu ngẫu nhiên mạnh",
+      "・Chuyển đổi mã màu (HEX, RGB, HSL, ...)",
+      "・Công cụ đếm ký tự, từ, dòng",
+      "・Giao diện thân thiện, responsive",
+      "・Không cần đăng nhập, sử dụng miễn phí"
     ],
     "challenges": [
-      "Tối ưu API calls",
-      "Xử lý location permissions",
-      "Offline functionality"
+      "Tích hợp nhiều công cụ khác nhau trên cùng một nền tảng",
+      "Đảm bảo hiệu suất và trải nghiệm người dùng mượt mà",
+      "Thiết kế giao diện đơn giản nhưng vẫn hiện đại, dễ sử dụng"
     ],
     "solutions": [
-      "Caching với AsyncStorage",
-      "Request location permission",
-      "Service worker cho offline"
+      "Tách biệt từng công cụ thành các module độc lập để dễ bảo trì và mở rộng",
+      "Sử dụng React và tối ưu hóa rendering để tăng tốc độ tải trang",
+      "Áp dụng thiết kế tối giản, tập trung vào trải nghiệm người dùng"
     ],
-    "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["React Native", "Expo", "OpenWeather API"],
-    "lottie": "https://assets9.lottiefiles.com/packages/lf20_xyadoh9h.json"
-  },
-  {
-    "title": "Chat Application",
-    "description": "Ứng dụng chat real-time với WebSocket",
-    "longDescription": "Chat Application là một ứng dụng chat real-time với khả năng tạo nhóm, chia sẻ file và gọi video. Ứng dụng sử dụng WebSocket để đảm bảo tốc độ truyền tin nhanh.",
-    "features": [
-      "Chat real-time",
-      "Tạo nhóm chat",
-      "Chia sẻ file và hình ảnh",
-      "Gọi video",
-      "Emoji và reactions",
-      "Tìm kiếm tin nhắn"
-    ],
-    "challenges": [
-      "Xử lý WebSocket connections",
-      "File upload và storage",
-      "Video call quality"
-    ],
-    "solutions": [
-      "Connection pooling",
-      "Cloud storage (AWS S3)",
-      "WebRTC optimization"
-    ],
-    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    "demoUrl": "#",
-    "githubUrl": "#",
-    "tags": ["Socket.io", "Express.js", "MongoDB"],
-    "lottie": "https://assets2.lottiefiles.com/packages/lf20_xyadoh9h.json"
+    "image": "assets/img/tool_detail.jpg",
+    "demoUrl": null,
+    "githubUrl": null,
+    "tags": ["React", "JavaScript", "Tailwind", "Utility"],
+    "lottie": "assets/lottiefiles/Tools.json"
   }
 ]
